@@ -10,8 +10,25 @@ namespace Wox.WhatupPlugin
 {
     public class Main : IPlugin
     {
+        public const string PluginActionKeyworkd = "wh";
+
+        private readonly IClipboardHelper _clipboardHelper;
+
         // @"https://web.whatsapp.com/send?phone=972544325740";
         private readonly string webApistring = @"https://web.whatsapp.com/send?phone=972";
+
+        public Main()
+        {
+            if (_clipboardHelper == null)
+            {
+                _clipboardHelper = new ClipboardHelper();
+            }
+        }
+
+        public Main(IClipboardHelper clipboardHelper) : this()
+        {
+            _clipboardHelper = clipboardHelper;
+        }
 
         public List<Result> Query(Query query)
         {
@@ -20,11 +37,8 @@ namespace Wox.WhatupPlugin
             var queryString = query.Search.Trim();
             if (queryString == string.Empty)
             { // try clipboard
-                var sw = Stopwatch.StartNew();
-                var clipboard = ClipboardHelper.GetClipboardText();
+                var clipboard = _clipboardHelper.GetClipboardText();
                 queryString = clipboard;
-                sw.Stop();
-                Debug.WriteLine(sw.Elapsed.TotalMilliseconds);
             }
 
             var phoneNumber = TryExtractPhoneNumber(queryString);
@@ -48,7 +62,7 @@ namespace Wox.WhatupPlugin
             return list;
         }
 
-        private static string TryExtractPhoneNumber(string phoneString)
+        public static string TryExtractPhoneNumber(string phoneString)
         {
             if (string.IsNullOrWhiteSpace(phoneString))
             {
@@ -59,7 +73,7 @@ namespace Wox.WhatupPlugin
             {
                 if (possibleNumber.Length == 12 && possibleNumber.StartsWith("972", StringComparison.OrdinalIgnoreCase))
                 {
-                    return "0" + possibleNumber.Substring(2);
+                    return "0" + possibleNumber.Substring(3);
                 }
 
                 if (possibleNumber.Length == 10 && possibleNumber.StartsWith("05"))
@@ -110,34 +124,5 @@ namespace Wox.WhatupPlugin
         }
     }
 
-    public static class ClipboardHelper
-    {
-        public static string GetClipboardText()
-        {
-            Exception threadEx = null;
-            var text = "";
-            var staThread = new Thread(
-                delegate ()
-                {
-                    try
-                    {
-                        text = Clipboard.GetText();
-                    }
 
-                    catch (Exception ex)
-                    {
-                        threadEx = ex;
-                    }
-                });
-            staThread.SetApartmentState(ApartmentState.STA);
-            staThread.Start();
-            staThread.Join();
-            if (threadEx != null)
-            {
-                throw threadEx;
-            }
-
-            return text;
-        }
-    }
 }
