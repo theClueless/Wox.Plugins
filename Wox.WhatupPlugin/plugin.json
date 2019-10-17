@@ -1,0 +1,12 @@
+{
+    "ID":"CDD0F2FC653B4D8582CD60DC76122244",
+    "ActionKeyword":"wh",
+    "Name":"whatup",
+    "Description":"Whatup plugin",
+    "Author":"Amir Tepper",
+    "Version":"1.0.0",
+    "Language":"csharp",
+    "Website":"https://github.com/Wox-launcher/Wox",
+    "ExecuteFileName":"Wox.WhatupPlugin.dll",
+    "IcoPath":"Images\\whatup.png"
+}
