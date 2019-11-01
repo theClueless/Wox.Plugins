@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.OpenCMD", "Wox.O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.ProcessKiller", "Wox.Plugin.ProcessKiller\Wox.Plugin.ProcessKiller.csproj", "{86BE9D87-3289-4D7F-BC9D-EC19418A1E2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.ProcessKiller.Test", "Wox.Plugin.ProcessKiller.Test\Wox.Plugin.ProcessKiller.Test.csproj", "{D468C7EC-129C-49D8-A3CD-CA4610B0328B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{86BE9D87-3289-4D7F-BC9D-EC19418A1E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86BE9D87-3289-4D7F-BC9D-EC19418A1E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86BE9D87-3289-4D7F-BC9D-EC19418A1E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
