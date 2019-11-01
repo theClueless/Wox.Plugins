@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
+using Wox.Infrastructure;
 
 namespace Wox.Plugin.ProcessKiller
 {
@@ -40,19 +42,20 @@ namespace Wox.Plugin.ProcessKiller
                     : CreateResultsFromProcesses(processlist, termToSearch);
         }
 
-        private List<Result> CreateResultsFromProcesses(List<Process> processlist, string termToSearch)
+        private List<Result> CreateResultsFromProcesses(List<ProcessResult> processlist, string termToSearch)
         {
             var results = new List<Result>();
 
-            foreach (var proc in processlist)
+            foreach (var pr in processlist)
             {
-                var p = proc;
+                var p = pr.Process;
                 var path = GetPath(p);
                 results.Add(new Result()
                 {
                     IcoPath = path,
                     Title = p.ProcessName + " - " + p.Id,
                     SubTitle = path,
+                    Score = pr.Score,
                     Action = (c) =>
                     {
                         KillProcess(p);
@@ -68,11 +71,12 @@ namespace Wox.Plugin.ProcessKiller
                     IcoPath = "Images\\app.png",
                     Title = "kill all \"" + termToSearch + "\" process",
                     SubTitle = "",
+                    Score = 100,
                     Action = (c) =>
                     {
                         foreach (var p in processlist)
                         {
-                            KillProcess(p);
+                            KillProcess(p.Process);
                         }
 
                         return true;
@@ -91,9 +95,9 @@ namespace Wox.Plugin.ProcessKiller
             }
         }
 
-        private List<Process> GetProcesslist(string termToSearch)
+        private List<ProcessResult> GetProcesslist(string termToSearch)
         {
-            var processlist = new List<Process>();
+            var processlist = new List<ProcessResult>();
             var processes = Process.GetProcesses();
             if (string.IsNullOrWhiteSpace(termToSearch))
             {
@@ -102,7 +106,7 @@ namespace Wox.Plugin.ProcessKiller
                 {
                     if (FilterSystemProcesses(p)) continue;
 
-                    processlist.Add(p);
+                    processlist.Add(new ProcessResult(p,0));
                 }
             }
             else
@@ -110,11 +114,8 @@ namespace Wox.Plugin.ProcessKiller
                 foreach (var p in processes)
                 {
                     if (FilterSystemProcesses(p)) continue;
-
-                    if ((p.ProcessName + p.Id).ToLower().Contains(termToSearch))
-                    {
-                        processlist.Add(p);
-                    }
+                    var score = StringMatcher.FuzzySearch(termToSearch, p.ProcessName + p.Id).ScoreAfterSearchPrecisionFilter();
+                    processlist.Add(new ProcessResult(p, score));
                 }
             }
 
@@ -127,6 +128,19 @@ namespace Wox.Plugin.ProcessKiller
                     return true;
                 return false;
             }
+        }
+
+        internal class ProcessResult
+        {
+            public ProcessResult(Process process, int score)
+            {
+                Process = process;
+                Score = score;
+            }
+
+            public Process Process { get; }
+
+            public int Score { get; }
         }
 
         private string GetPath(Process p)
