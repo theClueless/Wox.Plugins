@@ -3,7 +3,7 @@
     "ActionKeyword":"wh",
     "Name":"whatup",
     "Description":"Whatup plugin",
-    "Author":"Amir Tepper",
+    "Author":"atepper",
     "Version":"1.0.0",
     "Language":"csharp",
     "Website":"https://github.com/Wox-launcher/Wox",

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.ProcessKiller", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.ProcessKiller.Test", "Wox.Plugin.ProcessKiller.Test\Wox.Plugin.ProcessKiller.Test.csproj", "{D468C7EC-129C-49D8-A3CD-CA4610B0328B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.OneNote", "Wox.Plugin.OneNote\Wox.Plugin.OneNote.csproj", "{F89D1BE8-F5EA-40C7-A3F5-92C8422B0C75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D468C7EC-129C-49D8-A3CD-CA4610B0328B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89D1BE8-F5EA-40C7-A3F5-92C8422B0C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89D1BE8-F5EA-40C7-A3F5-92C8422B0C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89D1BE8-F5EA-40C7-A3F5-92C8422B0C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89D1BE8-F5EA-40C7-A3F5-92C8422B0C75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
