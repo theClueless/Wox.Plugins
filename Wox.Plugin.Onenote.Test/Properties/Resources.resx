@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TodayStringResult" xml:space="preserve">
+    <value>&lt;one:Notebooks xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote"&gt;
+  &lt;one:Notebook name="My Notebook" nickname="My Notebook" ID="{AFF6CE2D-8188-45C8-9829-6FAC1CB66023}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\My Notebook" lastModifiedTime="2019-11-07T10:49:38.000Z" color="#B7C997"&gt;
+    &lt;one:Section name="Quick Notes" ID="{54DADC52-B1C5-02DF-0F93-7E8525D86438}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\My Notebook\Quick Notes.one" lastModifiedTime="2019-11-07T10:49:38.000Z" color="#FFD869"&gt;
+      &lt;one:Page ID="{54DADC52-B1C5-02DF-0F93-7E8525D86438}{1}{E19526683310196358117620112389334552583645901}" name="17 - 19 - 1 day + 1 day" dateTime="2018-04-17T12:24:37.000Z" lastModifiedTime="2018-04-22T11:18:56.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{54DADC52-B1C5-02DF-0F93-7E8525D86438}{1}{E19510002027725374359920152779706957078271351}" name="Cloud services source control and CI/CD pipeline" dateTime="2019-01-30T08:29:29.000Z" lastModifiedTime="2019-01-30T14:00:30.000Z" pageLevel="1"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="Yc?@YdUhOJryd" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{54DADC52-B1C5-02DF-0F93-7E8525D86438}{1}{E19527244850716365595720141522872855520659731}" name="לא קראתי טוב. חשבתי שאתה מתכוון לספרים." dateTime="2019-03-10T21:49:54.000Z" lastModifiedTime="2019-03-10T22:58:13.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="Team" nickname="Team" ID="{CFD51A05-22DA-43EC-AA93-FD7FE0EEC4D5}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Team" lastModifiedTime="2019-11-07T06:39:11.000Z" color="#E8D199"&gt;
+    &lt;one:Section name="People" ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Team\People.one" lastModifiedTime="2019-11-06T10:58:24.000Z" color="#ADE792"&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1819451081628983852220148369921972843369521}" name="Shai" dateTime="2018-01-11T07:07:37.000Z" lastModifiedTime="2019-07-31T09:54:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1910845929588449621851961518549463536187221}" name="On" dateTime="2018-01-11T07:09:13.000Z" lastModifiedTime="2019-09-12T06:28:54.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E181997559676821767981934963722662839872221}" name="Amir Career development" dateTime="2019-02-10T06:23:43.000Z" lastModifiedTime="2019-08-11T05:10:29.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E185382881442787701351933273973975152059071}" name="Amir Career development - session 2 19/6" dateTime="2019-02-10T06:23:43.000Z" lastModifiedTime="2019-08-11T05:10:31.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1834225837465330184320148789000031175280781}" name="Maayan development template" dateTime="2019-02-10T06:23:43.000Z" lastModifiedTime="2019-02-14T11:46:45.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1848935474042289696820146370659192220938631}" name="Maayan development session 2 27\5" dateTime="2019-02-10T06:23:43.000Z" lastModifiedTime="2019-06-02T07:58:42.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1862318683032852798720161746344087374226351}" name="Aviv" dateTime="2018-01-29T08:01:42.000Z" lastModifiedTime="2019-11-05T09:44:07.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1843955724848885018620132856293736509204591}" name="Andy" dateTime="2019-03-13T06:31:58.000Z" lastModifiedTime="2019-09-24T05:20:27.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E182340471802645741801974501893811371215431}" name="Monthly" dateTime="2018-12-23T14:37:23.000Z" lastModifiedTime="2019-01-17T13:40:36.000Z" pageLevel="3" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E17151786326004557651980821946842285688701}" name="Amir Focal 2018" dateTime="2018-09-04T18:34:46.000Z" lastModifiedTime="2019-01-13T08:39:10.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E178331992357455705420114732269112700992201}" name="Monthly " dateTime="2018-12-23T14:37:23.000Z" lastModifiedTime="2018-12-25T11:03:09.000Z" pageLevel="3" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E19108314436235168352220120176085532121682531}" name="On Focal 2018" dateTime="2018-09-04T18:34:46.000Z" lastModifiedTime="2019-01-14T06:34:06.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{18735E03-DCF5-05F0-3420-5F0ADAB6C82B}{1}{E1910018991946713699251980947159744382500051}" name="Monthly" dateTime="2018-12-23T14:37:23.000Z" lastModifiedTime="2019-01-05T09:48:12.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="TRACE WORKBOOK" nickname="TRACE WORKBOOK" ID="{D0E406FC-5E9B-4B7D-B327-FA997315F4D9}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK" lastModifiedTime="2019-11-07T13:41:39.000Z" color="#D5A4BB" isUnread="true"&gt;
+    &lt;one:Section name="Main" ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Main.one" lastModifiedTime="2019-11-07T05:54:48.000Z" color="#8AA8E4" isUnread="true"&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E183917737533120644431978453315573328033721}" name="Analysis, Readiness, Experiments" dateTime="2013-11-26T08:09:59.000Z" lastModifiedTime="2014-02-25T09:25:05.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E194892403905007281976188322700297340668261}" name="Levels" dateTime="2013-12-30T08:16:34.000Z" lastModifiedTime="2014-01-16T07:59:22.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E19500532734436279138020170711275327670575941}" name="Test program data " dateTime="2014-01-12T08:34:26.000Z" lastModifiedTime="2014-01-14T11:42:26.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E19499763117338011199720147761747028733541121}" name="Personal" dateTime="2013-12-31T13:42:51.000Z" lastModifiedTime="2014-08-28T10:22:43.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E194739469432894295972184824989353625315151}" name="RCA (Root Cause Analysis) notes" dateTime="2014-12-01T12:21:23.000Z" lastModifiedTime="2014-12-10T09:42:36.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E19476739518059651247520121773806428759248831}" name="New Developers Training - RAMP\bootcamp" dateTime="2015-08-20T10:48:03.000Z" lastModifiedTime="2018-08-30T14:49:04.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BEAB94F3-53D9-06A1-2E0B-EE96BB1BF2D5}{1}{E1950683219553312889621995643861812519289741}" name="TPTorrent" dateTime="2018-02-21T14:09:09.000Z" lastModifiedTime="2018-04-09T07:21:33.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Retrospective" ID="{BEAB726C-CCD7-0EDE-0A7B-003FA230E96A}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Retrospective.one" lastModifiedTime="2019-11-04T14:41:10.000Z" color="#4DBCCA" isUnread="true"&gt;
+      &lt;one:Page ID="{BEAB726C-CCD7-0EDE-0A7B-003FA230E96A}{1}{E1957055588934202775741961586674195419337031}" name="15Q2_2122" dateTime="2015-01-11T12:38:24.000Z" lastModifiedTime="2015-06-14T11:28:30.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Developer notes" ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Developer notes.one" lastModifiedTime="2019-11-05T17:14:31.000Z" color="#F5F96F" isUnread="true"&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E19509541193337902669620125234722908137197321}" name="MOLE VORTEX " dateTime="2014-11-27T09:25:35.000Z" lastModifiedTime="2014-11-27T09:26:49.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E188991776848302564831947315790333868267711}" name="Pre process left to do" dateTime="2015-03-19T06:41:41.000Z" lastModifiedTime="2017-01-23T14:30:03.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E184898972033051757841925361082076173192091}" name="Design notes" dateTime="2015-07-12T12:10:27.000Z" lastModifiedTime="2015-07-12T14:23:23.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E19467484700558718353420112537179167508059351}" name="static TP Compare - design" dateTime="2017-01-16T15:08:17.000Z" lastModifiedTime="2017-01-19T06:53:52.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E1947686513649488896851961491425752219291291}" name="Validation tool HL" dateTime="2017-03-29T11:29:29.000Z" lastModifiedTime="2017-04-03T11:29:54.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E1824774722438310188720114007409365861097151}" name="Validation - dashboard design HL after scope reduction" dateTime="2017-06-06T11:36:09.000Z" lastModifiedTime="2017-06-06T12:25:43.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E19546024449389301034420135475017666885526141}" name="Corrupted tpl cases" dateTime="2018-06-17T13:19:41.000Z" lastModifiedTime="2018-06-17T13:57:41.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{DA928899-DC79-08A0-28D1-205805820969}{1}{E19495000041705664961020139920699406476842581}" name="Excel Course" dateTime="2018-07-04T06:42:55.000Z" lastModifiedTime="2018-07-04T12:36:44.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="IxD" ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\IxD.one" lastModifiedTime="2019-11-07T12:08:07.000Z" color="#9595AA" isUnread="true"&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19566959678430491890320156537332965930236201}" name="Requests parking lot" dateTime="2015-02-24T15:15:58.000Z" lastModifiedTime="2015-12-07T12:57:58.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19547342054762676061020132780417365406406661}" name="Meetings notes, Ireland 2016 ww39" dateTime="2016-09-19T08:40:23.000Z" lastModifiedTime="2016-09-28T11:49:56.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19559570568197474029120137266055102653720331}" name="VMIN frequency changes" dateTime="2016-06-30T08:24:46.000Z" lastModifiedTime="2016-06-30T08:24:53.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19506988179645231959220113305972332549260081}" name="DTV Infrastructure Priority List - Dima - Enable Per-Core/Tile VMIN" dateTime="2017-06-14T12:07:25.000Z" lastModifiedTime="2017-07-19T10:58:20.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E195719617659928470572182112950626897447741}" name="TRACE Vmin df/dv Extrapolation Calculation - meetings summary." dateTime="2018-07-05T17:18:06.000Z" lastModifiedTime="2018-07-05T17:39:45.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E1950397653122376808181916418847779631781531}" name="OnZi IxD courses summery" dateTime="2018-07-26T10:10:29.000Z" lastModifiedTime="2018-12-30T09:45:32.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19568431084995722427220181554466519930384971}" name="Personas - Try to describe/show how the person see the world" dateTime="2018-11-26T13:30:38.000Z" lastModifiedTime="2019-01-09T14:12:02.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E1948697245349177778601990004403839126335261}" name="Interview 2 : Yossi Sh" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2018-12-02T12:26:18.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E195182821742373892763181463333582612980671}" name="Test time Budget - feature request" dateTime="2018-10-17T10:36:47.000Z" lastModifiedTime="2018-10-21T06:22:37.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19475197996581131893720169153851103877894931}" name="iTUFF Size" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2018-11-05T10:17:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19574087684804797063320135505587967595797761}" name="MIDAS ITUFF size - Anton" dateTime="2018-11-05T09:08:06.000Z" lastModifiedTime="2018-11-05T09:45:54.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19561864025448405767020179581620448697530061}" name="Ituff reduction meeting (Yariv &amp;amp; POs of ICL)" dateTime="2019-01-23T12:03:48.000Z" lastModifiedTime="2019-01-23T14:56:50.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E1952835482780041520991926582530715310611321}" name="Action-Required and conclusion - Ituff reduction meeting " dateTime="2019-01-23T13:57:16.000Z" lastModifiedTime="2019-02-03T13:26:05.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19491432356378220444120117066706701788670881}" name="DFF Validation" dateTime="2019-02-14T11:15:07.000Z" lastModifiedTime="2019-02-18T12:50:19.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E1952006813267637701641982470025248619227281}" name="IntraDUT questions" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2019-03-24T18:34:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19548078615793787139820115544512772010147081}" name="Hamster IxD" dateTime="2019-05-23T11:55:09.000Z" lastModifiedTime="2019-10-23T13:38:46.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E195082673717823657913185266714159041182001}" name="Aviv's Research Summary" dateTime="2019-06-25T08:21:51.000Z" lastModifiedTime="2019-06-27T09:54:35.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{C15667AD-6239-0F0E-29E8-AF473EC2E5A1}{1}{E19484214713632472372720113200423207614209551}" name="[UT] Zaharim, Wan Nurnabilah" dateTime="2019-10-07T07:28:12.000Z" lastModifiedTime="2019-10-22T14:07:06.000Z" pageLevel="3" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Design" ID="{BB01075C-67F4-093F-0472-39C0796DFAD4}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Design.one" lastModifiedTime="2019-11-04T11:28:33.000Z" color="#9BBBD2" isUnread="true"&gt;
+      &lt;one:Page ID="{BB01075C-67F4-093F-0472-39C0796DFAD4}{1}{E1946845794356616818461979741499057740883691}" name="Vmin per Core Design" dateTime="2018-02-08T09:08:21.000Z" lastModifiedTime="2018-03-14T13:03:04.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BB01075C-67F4-093F-0472-39C0796DFAD4}{1}{E19574977774629498144320132561468670847420211}" name="[Dashboard tickets system] High Level Architecture Design" dateTime="2018-10-16T08:16:30.000Z" lastModifiedTime="2018-12-18T13:42:08.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BB01075C-67F4-093F-0472-39C0796DFAD4}{1}{E19511555286581015032120166493448174895566301}" name="Research on EDIS Architecture structure" dateTime="2018-10-21T07:58:05.000Z" lastModifiedTime="2018-11-01T09:42:15.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{BB01075C-67F4-093F-0472-39C0796DFAD4}{1}{E194975223172883574629184831352189486171201}" name="Raw Vmin support in client" dateTime="2019-08-14T06:03:49.000Z" lastModifiedTime="2019-10-06T06:50:15.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="HAMSTER" ID="{86B1E989-5F19-0D9B-31BB-FD200B75E194}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\HAMSTER.one" lastModifiedTime="2019-11-07T13:41:39.000Z" color="#9595AA" isUnread="true"&gt;
+      &lt;one:Page ID="{86B1E989-5F19-0D9B-31BB-FD200B75E194}{1}{E19556366134871736018520158857886058252018171}" name="HDMT tasks" dateTime="2018-11-14T10:54:24.000Z" lastModifiedTime="2019-06-02T11:33:42.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{86B1E989-5F19-0D9B-31BB-FD200B75E194}{1}{E185005710347177438301987297554710272573511}" name="Storage sizes" dateTime="2019-05-29T12:26:21.000Z" lastModifiedTime="2019-06-02T10:45:07.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{86B1E989-5F19-0D9B-31BB-FD200B75E194}{1}{E186243580778073870921971494739579766510671}" name="Design - Wheel" dateTime="2019-07-07T11:52:14.000Z" lastModifiedTime="2019-10-22T07:59:03.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="EDIS" ID="{B491CD80-9982-0167-3F04-AFCE8726E64C}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\EDIS.one" lastModifiedTime="2019-11-01T14:03:13.000Z" color="#E8D199"&gt;
+      &lt;one:Page ID="{B491CD80-9982-0167-3F04-AFCE8726E64C}{1}{E19530613117138219448520181068324028791994031}" name="Fetch only meta data and then fetch actual data per demand for a defined prefix" dateTime="2019-01-15T07:01:07.000Z" lastModifiedTime="2019-01-15T08:25:16.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:SectionGroup name="OneNote_RecycleBin" ID="{138F4BBC-4074-4403-97D3-6385A7695618}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\OneNote_RecycleBin" lastModifiedTime="2019-11-07T05:54:44.000Z" isRecycleBin="true"&gt;
+      &lt;one:Section name="Deleted Pages" ID="{B8C54995-553C-00D7-2BDE-C5919DF19A99}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\OneNote_RecycleBin\OneNote_DeletedPages.one" lastModifiedTime="2019-11-07T05:54:44.000Z" color="#E1E1E1" isInRecycleBin="true" isDeletedPages="true"&gt;
+        &lt;one:Page ID="{B8C54995-553C-00D7-2BDE-C5919DF19A99}{1}{E1952998687906258914481921130072437464871981}" name="IxD" dateTime="2019-05-23T11:55:09.000Z" lastModifiedTime="2019-10-23T13:38:34.000Z" pageLevel="2" isInRecycleBin="true" /&gt;
+        &lt;one:Page ID="{B8C54995-553C-00D7-2BDE-C5919DF19A99}{1}{E195052826183188384732185635005866616785091}" name="[UT] Zaharim, Wan Nurnabilah" dateTime="2019-10-07T07:28:12.000Z" lastModifiedTime="2019-10-22T14:07:06.000Z" pageLevel="3" isInRecycleBin="true" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="SCI Tools IDC" nickname="SCI Tools IDC" ID="{83760B7A-40EF-407A-AA0B-0FF2D6F89AFF}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\SCI_Tools_IDC\SCI Tools IDC" lastModifiedTime="2019-11-06T14:33:51.000Z" color="#E8D199" isUnread="true"&gt;
+    &lt;one:Section name="Torch Project" ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\SCI_Tools_IDC\SCI Tools IDC\Torch Project.one" lastModifiedTime="2019-11-06T14:33:51.000Z" color="#ADE792" isUnread="true"&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1820771832493157224420160985290405007616221}" name="Torch Risks " dateTime="2018-07-24T11:17:53.000Z" lastModifiedTime="2019-10-28T17:58:59.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1830961865735990356220183814035075567378541}" name="Torch Risk review WW25 " dateTime="2019-06-17T13:22:16.000Z" lastModifiedTime="2019-06-19T05:49:04.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J}i_Ic@_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1947751705466382896101935686299295085231631}" name="Torch UxD WW32" dateTime="2019-08-06T06:00:43.000Z" lastModifiedTime="2019-08-07T05:46:47.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="dYlRv{DO_@Rym" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1899293716740896632720176582206425754424711}" name="TPD 1/4/19  " dateTime="2019-03-26T16:35:12.000Z" lastModifiedTime="2019-04-01T12:44:25.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHTV_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19108742956594350329220168338086647491545911}" name="TPD 4/4/19" dateTime="2019-03-26T16:35:12.000Z" lastModifiedTime="2019-04-11T07:51:19.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHTQ_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1910900621077131098171957360103245173576001}" name="TPIE Capabilities " dateTime="2019-03-24T14:23:22.000Z" lastModifiedTime="2019-04-11T14:09:18.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E189712527867411727261961290992334315750571}" name="WW16 Map Day " dateTime="2019-04-17T18:23:51.000Z" lastModifiedTime="2019-04-29T11:41:37.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGGC@_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E18595620562157804018189832857704107517501}" name="TPD 23/4 " dateTime="2019-04-23T09:52:58.000Z" lastModifiedTime="2019-04-29T10:12:25.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHVt_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19100549925877090471420155616988244040161371}" name="MVP Options " dateTime="2019-05-06T13:18:45.000Z" lastModifiedTime="2019-05-14T12:26:39.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1911366108147496369571944526165614295360271}" name="Torch plan day material " dateTime="2019-05-01T07:51:23.000Z" lastModifiedTime="2019-05-08T10:19:12.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E182323105758348147241956445360875447378131}" name="Bin Matrix Files " dateTime="2019-05-01T07:51:23.000Z" lastModifiedTime="2019-05-06T12:06:21.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1946688866379044513791923091536078815156591}" name="Specs" dateTime="2019-05-05T12:07:16.000Z" lastModifiedTime="2019-05-06T11:52:35.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19477686066289568440520142028846203806030361}" name="Binning &amp;amp; Counters" dateTime="2019-03-27T07:58:46.000Z" lastModifiedTime="2019-04-04T10:57:25.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19479125381696983837320123051338102639248961}" name="Speed flow" dateTime="2019-03-27T08:04:33.000Z" lastModifiedTime="2019-05-06T07:06:32.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E188289279719136153571962822442392910543801}" name="Pattern , plists and pattern modify " dateTime="2019-03-28T11:18:59.000Z" lastModifiedTime="2019-04-23T06:53:11.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E1911113887677039323231963443163964249789621}" name="TP execution in ATM " dateTime="2019-04-02T09:04:19.000Z" lastModifiedTime="2019-04-04T10:33:56.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KLWDS_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E187858309619562445141961193312320737295541}" name="Feedback from Ali and his team on the demo" dateTime="2019-04-15T06:55:51.000Z" lastModifiedTime="2019-04-15T10:25:39.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19500419123773078350020132744732893784572251}" name="TOS requirements" dateTime="2019-04-18T12:05:20.000Z" lastModifiedTime="2019-04-28T14:14:36.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19572846619197381579820117124724122599267111}" name="PLT" dateTime="2019-05-01T20:03:15.000Z" lastModifiedTime="2019-05-01T21:07:30.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19515603289227328599820122907181873944490311}" name="PLT - planning day summary " dateTime="2019-05-01T20:18:29.000Z" lastModifiedTime="2019-06-12T09:23:19.000Z" pageLevel="3" /&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19470460732676924156520167856556346414619121}" name="TOS/PRIME/TORCH FTF" dateTime="2019-11-04T09:04:31.000Z" lastModifiedTime="2019-11-04T14:41:01.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="dYlQgNtQ_@Rym" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{26937917-16B4-00A3-1194-0AE2AA0C30AC}{1}{E19506241693000830414920132461207572986090821}" name="TOS rules (porting PGM rules)" dateTime="2019-11-05T13:06:46.000Z" lastModifiedTime="2019-11-05T13:10:50.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Misc" ID="{678989ED-FF4C-0281-0597-4EEB94CA084E}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\SCI_Tools_IDC\SCI Tools IDC\Misc.one" lastModifiedTime="2019-11-01T15:37:07.000Z" color="#FFD869"&gt;
+      &lt;one:Page ID="{678989ED-FF4C-0281-0597-4EEB94CA084E}{1}{E1947447546290631592511944763312975887692091}" name="Type of KPIs " dateTime="2019-05-12T08:09:08.000Z" lastModifiedTime="2019-05-14T05:43:28.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{678989ED-FF4C-0281-0597-4EEB94CA084E}{1}{E19498430766754651790120160904148976426244271}" name="Torch KPI Measures " dateTime="2019-05-14T05:25:24.000Z" lastModifiedTime="2019-05-21T09:35:43.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="TP Validation" ID="{589B4AC9-89B5-0FBF-0E83-0B9C194724C5}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\SCI_Tools_IDC\SCI Tools IDC\TP Validation.one" lastModifiedTime="2019-11-01T15:36:57.000Z" color="#F5F96F"&gt;
+      &lt;one:Page ID="{589B4AC9-89B5-0FBF-0E83-0B9C194724C5}{1}{E1946451103284421276911920839794941807028831}" name="TPV IxD Notes" dateTime="2016-07-12T20:00:23.000Z" lastModifiedTime="2016-11-16T07:08:38.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="General" nickname="General" ID="{042CF4B3-CE1B-4DC6-AA26-5467A19F50B6}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General" lastModifiedTime="2019-11-07T13:02:14.000Z" color="#ADE792" isCurrentlyViewed="true"&gt;
+    &lt;one:Section name="Work general" ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Work general.one" lastModifiedTime="2019-11-07T13:02:14.000Z" color="#9BBBD2" isCurrentlyViewed="true"&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E1953524419286421578541947584227482192396071}" name="MSDN acount" dateTime="2013-03-20T12:55:32.000Z" lastModifiedTime="2013-12-12T23:19:30.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E1950837817512984282631924125641390647742891}" name="Transitation to mamgt" dateTime="2017-12-03T06:17:40.000Z" lastModifiedTime="2017-12-27T08:53:07.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E19465473480808629351420155766711845809873131}" name="Today" dateTime="2016-07-26T09:21:35.000Z" lastModifiedTime="2019-11-07T13:02:14.000Z" pageLevel="1" isCurrentlyViewed="true" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E1954976607789900382141955572845203511116051}" name="HSDES" dateTime="2018-05-06T08:38:23.000Z" lastModifiedTime="2018-06-12T13:10:04.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E1951982303878726690501985483512618654419751}" name="USM intro" dateTime="2018-10-21T11:07:58.000Z" lastModifiedTime="2018-11-19T14:07:16.000Z" pageLevel="1"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="YcFz|^vwOJryd" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E19537163143278715147520151930466646505507141}" name="TP as code" dateTime="2019-02-06T06:03:18.000Z" lastModifiedTime="2019-02-11T06:09:17.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E19461856010830873597120119495999929180688861}" name="Build Solution" dateTime="2019-02-17T15:51:38.000Z" lastModifiedTime="2019-02-18T14:37:03.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E19538670625528153912520126596654290164402461}" name="Build Solution 2" dateTime="2019-02-17T15:51:38.000Z" lastModifiedTime="2019-02-25T15:07:32.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{57DA766B-9462-09C8-3A88-007E28D00812}{1}{E1953661100507125098341923621008797860478851}" name="Problem statement -" dateTime="2019-11-04T08:29:11.000Z" lastModifiedTime="2019-11-05T13:08:37.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="FV Validation" ID="{D903C3A8-AB39-0C63-0378-A7A7939DD202}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\FV Validation.one" lastModifiedTime="2019-11-01T15:39:58.000Z" color="#8AA8E4"&gt;
+      &lt;one:Page ID="{D903C3A8-AB39-0C63-0378-A7A7939DD202}{1}{E1868060291064543503920147180756754649231591}" name="Retro -" dateTime="2018-10-08T10:00:14.000Z" lastModifiedTime="2018-10-10T12:27:32.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Torch (Mine)" ID="{62B92E05-3351-096B-31A2-5B9FD3249DFA}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Torch (Mine).one" lastModifiedTime="2019-11-01T15:39:58.000Z" color="#AB9CB7"&gt;
+      &lt;one:Page ID="{62B92E05-3351-096B-31A2-5B9FD3249DFA}{1}{E187174442168687211251932884193439067568651}" name="Torch" dateTime="2019-03-28T06:13:26.000Z" lastModifiedTime="2019-05-20T09:11:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{62B92E05-3351-096B-31A2-5B9FD3249DFA}{1}{E1880234627394145510120145036884004758953431}" name="Eran Mail" dateTime="2019-05-20T09:27:08.000Z" lastModifiedTime="2019-05-20T09:27:26.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{62B92E05-3351-096B-31A2-5B9FD3249DFA}{1}{E1831316451823117624220126646554704141581331}" name="MS talks" dateTime="2019-06-16T10:33:09.000Z" lastModifiedTime="2019-06-19T13:11:34.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:SectionGroup name="Old" ID="{0E4B8D35-EB4D-4A8F-9A35-29774EBD3B70}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Old" lastModifiedTime="2019-11-01T15:40:07.000Z"&gt;
+      &lt;one:Section name="Rony" ID="{A1AA925C-0F4D-092D-26D5-3228F3766777}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Old\Rony.one" lastModifiedTime="2019-11-01T15:40:07.000Z" color="#AB9CB7"&gt;
+        &lt;one:Page ID="{A1AA925C-0F4D-092D-26D5-3228F3766777}{1}{E186424900268166359211928869062281239281051}" name="18.1" dateTime="2012-01-18T10:56:51.000Z" lastModifiedTime="2012-01-18T12:19:17.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="Udi" ID="{99C7703F-7552-0823-0BE6-D732851FDF3A}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Old\Udi.one" lastModifiedTime="2019-11-01T15:40:07.000Z" color="#B49EDE"&gt;
+        &lt;one:Page ID="{99C7703F-7552-0823-0BE6-D732851FDF3A}{1}{E1955174925606236814971937038123824350831691}" name="1:1 Amir x Udi (7/18/2011)" dateTime="2011-07-18T05:39:11.000Z" lastModifiedTime="2011-07-18T06:48:10.000Z" pageLevel="1"&gt;
+          &lt;one:Meta name="OutlookEntryHash" content="@Z{GIgCDVpOIk" /&gt;
+        &lt;/one:Page&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="Swat" ID="{645A6E57-35D9-04EF-2B0B-984B71B4BC76}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\General\Old\Swat.one" lastModifiedTime="2019-11-01T15:40:06.000Z" color="#91BAAE"&gt;
+        &lt;one:Page ID="{645A6E57-35D9-04EF-2B0B-984B71B4BC76}{1}{E19491934181347761686720180687485651857381531}" name="Swat" dateTime="2011-05-29T09:03:44.000Z" lastModifiedTime="2011-05-29T10:33:01.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{645A6E57-35D9-04EF-2B0B-984B71B4BC76}{1}{E19470821272869659577920151414799511708432931}" name="Extreme meta programming - roslyn " dateTime="2013-05-11T06:47:30.000Z" lastModifiedTime="2013-05-11T06:49:59.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{645A6E57-35D9-04EF-2B0B-984B71B4BC76}{1}{E194950910382196209862188155305552977309791}" name="Labs structure" dateTime="2014-04-09T05:04:52.000Z" lastModifiedTime="2014-04-09T05:21:12.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="other personal" nickname="other personal" ID="{580FD2FC-01AA-45F1-B8ED-EBB1FE0E3B24}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\other personal" lastModifiedTime="2019-11-06T16:05:44.000Z" color="#EE9597"&gt;
+    &lt;one:SectionGroup name="ישן" ID="{9CBBA687-7B95-476D-8DD5-774AE92C697C}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\other personal\ישן" lastModifiedTime="2019-11-01T15:40:50.000Z"&gt;
+      &lt;one:Section name="איטליה" ID="{9B176F51-911C-0383-04A6-0A4A703B95FC}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\other personal\ישן\איטליה.one" lastModifiedTime="2019-11-01T15:40:49.000Z" color="#9595AA"&gt;
+        &lt;one:Page ID="{9B176F51-911C-0383-04A6-0A4A703B95FC}{1}{E17793891814460802151985979245625278973891}" name="http://www.booking.com/hotel/it/fattoria-san-donato.html?sid=3754e8e0ae9dedee8434664b4f216114" dateTime="2011-10-04T23:35:09.000Z" lastModifiedTime="2011-10-04T23:35:09.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="Viral" ID="{E5698AC3-2668-06F0-3964-80A8AE404E94}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\other personal\ישן\Viral.one" lastModifiedTime="2019-11-01T15:40:39.000Z" color="#ADE792"&gt;
+        &lt;one:Page ID="{E5698AC3-2668-06F0-3964-80A8AE404E94}{1}{E1911168792271435497021923912476613799596091}" name="Viral" dateTime="2014-07-23T05:24:27.000Z" lastModifiedTime="2014-07-25T11:11:27.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="Other Projects" nickname="Other Projects" ID="{1D0580D7-7E47-4EF3-97C2-051EC64530DE}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects" lastModifiedTime="2019-11-01T15:41:10.000Z" color="#9BBBD2"&gt;
+    &lt;one:SectionGroup name="Old" ID="{F424AEB4-A63F-45E0-946A-C4C031D6B3C9}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects\Old" lastModifiedTime="2019-11-01T15:41:08.000Z"&gt;
+      &lt;one:Section name="Polaris" ID="{84119A01-E056-0464-3AFF-B23B7B050D48}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects\Old\Polaris.one" lastModifiedTime="2019-11-01T15:41:05.000Z" color="#BA7575"&gt;
+        &lt;one:Page ID="{84119A01-E056-0464-3AFF-B23B7B050D48}{1}{E188843539663856704761936062714142739520581}" name="Points for requirements" dateTime="2014-01-21T07:31:02.000Z" lastModifiedTime="2014-01-22T00:09:17.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{84119A01-E056-0464-3AFF-B23B7B050D48}{1}{E19102468559982165039020159098428168959071031}" name="Main features" dateTime="2014-01-22T00:02:49.000Z" lastModifiedTime="2014-02-12T16:21:15.000Z" pageLevel="2" /&gt;
+        &lt;one:Page ID="{84119A01-E056-0464-3AFF-B23B7B050D48}{1}{E183694242639426845161991121672773628447181}" name="Estimation" dateTime="2014-01-22T07:38:46.000Z" lastModifiedTime="2014-01-22T07:56:29.000Z" pageLevel="2" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="HDMT" ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects\Old\HDMT.one" lastModifiedTime="2019-11-01T15:41:02.000Z" color="#9BBBD2"&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E188837895857563622061919922855974280952531}" name="Requirements thoughts" dateTime="2012-02-21T06:03:08.000Z" lastModifiedTime="2012-02-21T14:05:09.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E1895832216928684520720150496066358113032171}" name="FW: HDMT handler requirements list" dateTime="2012-03-11T06:42:37.000Z" lastModifiedTime="2019-11-01T15:40:57.000Z" pageLevel="2" /&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E1812344464840401035320179164938064598407771}" name="Design options" dateTime="2012-05-13T09:53:50.000Z" lastModifiedTime="2012-05-13T13:43:56.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E19486638351694357353720135150919144931362941}" name="HDMT handler software - Weekly  (7/11/2012)" dateTime="2012-07-11T13:56:12.000Z" lastModifiedTime="2012-07-11T18:15:09.000Z" pageLevel="1"&gt;
+          &lt;one:Meta name="OutlookEntryHash" content="oIehPQdZjwGDZ" /&gt;
+        &lt;/one:Page&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E19476481462665979515320138464317219029098411}" name="HDMT handler software - Weekly  (8/15/2012)" dateTime="2012-08-15T14:59:13.000Z" lastModifiedTime="2012-08-15T18:38:43.000Z" pageLevel="1"&gt;
+          &lt;one:Meta name="OutlookEntryHash" content="oIehP\T^jwGDZ" /&gt;
+        &lt;/one:Page&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E19481969950229394636020179336555008524169231}" name="HDMT handler software - Weekly  (8/23/2012)" dateTime="2012-08-21T10:05:52.000Z" lastModifiedTime="2012-08-23T18:14:28.000Z" pageLevel="1"&gt;
+          &lt;one:Meta name="OutlookEntryHash" content="oIehP\UhjwGDZ" /&gt;
+        &lt;/one:Page&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E1954355025848740935231922319949523392321671}" name="HDMT handler software - Weekly  (9/5/2012)" dateTime="2012-09-02T12:18:50.000Z" lastModifiedTime="2012-09-05T19:22:11.000Z" pageLevel="1"&gt;
+          &lt;one:Meta name="OutlookEntryHash" content="oIehP[CNjwGDZ" /&gt;
+        &lt;/one:Page&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E1946698944979219999681974093960164177245971}" name="RABIT product configuration" dateTime="2012-10-24T17:29:27.000Z" lastModifiedTime="2012-11-12T06:27:17.000Z" pageLevel="1" /&gt;
+        &lt;one:Page ID="{7A716776-9467-06BF-3574-CC92D95CC514}{1}{E1953521403991032415861974599527394176636311}" name="RE: Information needed on current x6 Debug Handler" dateTime="2012-12-23T10:30:22.000Z" lastModifiedTime="2013-01-02T05:49:18.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="HDMT for class" ID="{A9AF170E-4E7A-0904-2DE0-54A9CCFB1179}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects\Old\HDMT for class.one" lastModifiedTime="2019-11-01T15:40:56.000Z" color="#91BAAE"&gt;
+        &lt;one:Page ID="{A9AF170E-4E7A-0904-2DE0-54A9CCFB1179}{1}{E1821013518962387913320176562004906172831151}" name="Basic high level requirements for first stage" dateTime="2013-01-02T06:03:21.000Z" lastModifiedTime="2013-01-03T09:36:15.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="VLAN - Devs Day" ID="{24984FE0-D34F-0806-33F6-7B6199B225BA}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Other Projects\Old\VLAN - Devs Day.one" lastModifiedTime="2019-11-01T15:40:55.000Z" color="#B49EDE"&gt;
+        &lt;one:Page ID="{24984FE0-D34F-0806-33F6-7B6199B225BA}{1}{E1859215377649944481520163099728122269773391}" name="Noam Requirements mail" dateTime="2011-12-19T13:56:08.000Z" lastModifiedTime="2011-12-19T13:58:15.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="CIFT Shared" nickname="CIFT Shared" ID="{79FC2573-AB2B-4061-B2FD-32D49559E99F}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared" lastModifiedTime="2019-11-03T23:41:15.000Z" color="#9DCD78" isUnread="true"&gt;
+    &lt;one:Section name="Process Definition" ID="{C53EA17A-E029-0E22-03B5-BF3089B20BC5}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Process Definition.one" lastModifiedTime="2019-11-01T15:45:33.000Z" color="#FFD869"&gt;
+      &lt;one:Page ID="{C53EA17A-E029-0E22-03B5-BF3089B20BC5}{1}{E182188296225334507061998112845890609521221}" name="CIFT for class summary " dateTime="2014-03-16T12:23:29.000Z" lastModifiedTime="2014-06-05T09:42:25.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Arch Research + Req" ID="{A241BB58-6B83-0923-2288-ABC03CB70D5E}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Arch Research + Req.one" lastModifiedTime="2019-11-01T15:44:43.000Z" color="#8AA8E4"&gt;
+      &lt;one:Page ID="{A241BB58-6B83-0923-2288-ABC03CB70D5E}{1}{E1951442490914835341091995237815819816001461}" name="Session 2 " dateTime="2014-05-20T06:04:11.000Z" lastModifiedTime="2014-05-20T09:03:17.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Scrum" ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Scrum.one" lastModifiedTime="2019-11-01T15:43:09.000Z" color="#ADE792"&gt;
+      &lt;one:Page ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{E1953929207623015920971945228583086596865381}" name="RULES" dateTime="2016-05-15T06:56:05.000Z" lastModifiedTime="2016-06-13T06:56:26.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{E1955066045753306981521945002168565310360661}" name="GSM" dateTime="2016-11-07T13:18:01.000Z" lastModifiedTime="2017-01-29T07:34:10.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{E1954007719649452498011971437255394504393081}" name="Problem Solving - CIFT Unavailability" dateTime="2017-02-01T08:10:06.000Z" lastModifiedTime="2017-02-12T07:30:03.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{E19560031195027027209620172254076208272731121}" name="2019'Q2.2" dateTime="2018-09-12T07:51:34.000Z" lastModifiedTime="2019-05-13T11:05:00.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{6E6417FC-1EA7-0839-3F36-3700FEDEAD86}{1}{E19570513734647334649120128188270368311179941}" name="2019'Q2 Retro" dateTime="2018-09-12T07:51:34.000Z" lastModifiedTime="2019-07-04T07:31:45.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Test Floor" ID="{D99B5491-88B8-0A38-0469-5FB8645D9F2F}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Test Floor.one" lastModifiedTime="2019-11-01T15:42:52.000Z" color="#D5A4BB"&gt;
+      &lt;one:Page ID="{D99B5491-88B8-0A38-0469-5FB8645D9F2F}{1}{E1888535678775283125420131694134678209305621}" name="Tester Reservation" dateTime="2014-09-14T07:03:17.000Z" lastModifiedTime="2015-10-27T09:42:58.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Support" ID="{3A2BCFE6-C7F2-0112-3F5F-BBF398B313B5}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Support.one" lastModifiedTime="2019-11-01T15:42:31.000Z" color="#91BAAE"&gt;
+      &lt;one:Page ID="{3A2BCFE6-C7F2-0112-3F5F-BBF398B313B5}{1}{E19492752989517094153320105343987084824070421}" name="Helpful SQL" dateTime="2014-12-21T13:15:14.000Z" lastModifiedTime="2015-03-24T13:41:53.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="WIKI" ID="{169F3812-2DD4-0FAE-0940-3DA7B36AEE2D}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\WIKI.one" lastModifiedTime="2019-11-01T15:42:12.000Z" color="#AB9CB7"&gt;
+      &lt;one:Page ID="{169F3812-2DD4-0FAE-0940-3DA7B36AEE2D}{1}{E1825819732118643503920180860679160205942131}" name="Vocabulary" dateTime="2016-05-05T05:29:53.000Z" lastModifiedTime="2016-09-06T19:03:53.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="pre-pilot bugs" ID="{67DD5467-D3A3-0E0F-1030-843A988D06CF}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\pre-pilot bugs.one" lastModifiedTime="2019-11-01T15:41:21.000Z" color="#91BAAE"&gt;
+      &lt;one:Page ID="{67DD5467-D3A3-0E0F-1030-843A988D06CF}{1}{E1878074989921691070420114056978586590497471}" name="Pre-pilot bugs " dateTime="2018-06-12T13:07:03.000Z" lastModifiedTime="2018-06-18T07:40:44.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="MPS Scenarios" ID="{CAA6C88A-9865-0E97-2C42-113C24F83035}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\MPS Scenarios.one" lastModifiedTime="2019-11-01T15:41:19.000Z" color="#B7C997"&gt;
+      &lt;one:Page ID="{CAA6C88A-9865-0E97-2C42-113C24F83035}{1}{E1820262232467535757320119137175567666058421}" name="MPS Scenarios" dateTime="2018-11-13T19:22:22.000Z" lastModifiedTime="2018-11-19T13:24:26.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="TFS Skyline 1.0" ID="{F7D55919-C78D-0EC6-3ECE-E810F9751BC0}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\TFS Skyline 1.0.one" lastModifiedTime="2019-11-01T15:41:19.000Z" color="#F6B078"&gt;
+      &lt;one:Page ID="{F7D55919-C78D-0EC6-3ECE-E810F9751BC0}{1}{E189453308799127623031994238097792385546431}" name="TFS Tickets skyline 1.0" dateTime="2018-11-14T19:37:59.000Z" lastModifiedTime="2019-01-28T11:11:45.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:SectionGroup name="BT" ID="{7081CC5F-8CEE-404D-89C4-0429194FB6C1}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\BT" lastModifiedTime="2019-11-01T15:42:07.000Z"&gt;
+      &lt;one:Section name="BT to JF 16Q1" ID="{6C01204B-CBA0-06DF-0FD8-D6F60BC49C58}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\BT\BT to JF 16Q1.one" lastModifiedTime="2019-11-01T15:42:06.000Z" color="#9BBBD2"&gt;
+        &lt;one:Page ID="{6C01204B-CBA0-06DF-0FD8-D6F60BC49C58}{1}{E1820721835400340722720119859750764628954091}" name="2016Q1 BT (Yair and Itsik)" dateTime="2016-03-01T22:17:42.000Z" lastModifiedTime="2019-04-14T11:10:32.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+      &lt;one:Section name="BT to JF 17Q1" ID="{00DA5288-6281-0D43-27F0-73BF0C239385}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\BT\BT to JF 17Q1.one" lastModifiedTime="2019-11-01T15:42:04.000Z" color="#F6B078"&gt;
+        &lt;one:Page ID="{00DA5288-6281-0D43-27F0-73BF0C239385}{1}{E185112323036790076791919834650236450086991}" name="CIFT usage - meeting with Johnard" dateTime="2017-03-08T01:56:15.000Z" lastModifiedTime="2017-03-16T12:12:45.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+    &lt;one:SectionGroup name="Offline Testing" ID="{10292BE8-F740-4F08-B717-246C7CB5D746}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Offline Testing" lastModifiedTime="2019-11-01T15:44:06.000Z"&gt;
+      &lt;one:Section name="TpTests" ID="{AF0FCBD6-DA4C-0F57-3C99-355B720F33B5}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\Offline Testing\TpTests.one" lastModifiedTime="2019-11-01T15:44:06.000Z" color="#B49EDE"&gt;
+        &lt;one:Page ID="{AF0FCBD6-DA4C-0F57-3C99-355B720F33B5}{1}{E181798092532992552261943064089826334100981}" name="Vmin searches" dateTime="2014-02-18T09:07:30.000Z" lastModifiedTime="2014-02-18T10:59:34.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+    &lt;one:SectionGroup name="PRD" ID="{B81A94E2-1F66-4F8A-A3D8-6D6CE357D89A}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\PRD" lastModifiedTime="2019-11-01T15:42:42.000Z"&gt;
+      &lt;one:Section name="Support Permissions" ID="{386D3009-C248-04AD-14A0-FF335F68703E}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\CIFT\WorkBook\CIFT Shared\PRD\Support Permissions.one" lastModifiedTime="2019-11-01T15:42:42.000Z" color="#B7C997"&gt;
+        &lt;one:Page ID="{386D3009-C248-04AD-14A0-FF335F68703E}{1}{E17361139175179926141996783921684809589841}" name="DFF tool permissions" dateTime="2017-03-13T18:53:34.000Z" lastModifiedTime="2017-03-15T21:35:52.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="Personal" nickname="Personal" ID="{E1C3DC21-4AF9-436B-B01A-47411B74ECBA}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Personal" lastModifiedTime="2019-11-01T15:45:51.000Z" color="#F6B078"&gt;
+    &lt;one:SectionGroup name="ישן" ID="{B5D5FC84-10C7-498C-B36F-C14AEF9D18E0}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Personal\ישן" lastModifiedTime="2019-11-01T15:45:47.000Z"&gt;
+      &lt;one:Section name="איטליה" ID="{01BB4593-9D07-09A4-0DBC-774D5D452766}{1}{B0}" path="C:\Users\atepper\Documents\OneNote Notebooks\Personal\ישן\איטליה.one" lastModifiedTime="2019-11-01T15:45:47.000Z" color="#9595AA"&gt;
+        &lt;one:Page ID="{01BB4593-9D07-09A4-0DBC-774D5D452766}{1}{E1880980358392541493320171416952096703030121}" name="http://www.booking.com/hotel/it/fattoria-san-donato.html?sid=3754e8e0ae9dedee8434664b4f216114" dateTime="2011-10-04T23:35:09.000Z" lastModifiedTime="2011-10-04T23:35:09.000Z" pageLevel="1" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="AQUA OneNote" nickname="AQUA OneNote" ID="{0A0616FC-DF26-4160-856C-BBE6247D79FE}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\AQUA\AQUA OneNote" lastModifiedTime="2019-11-04T20:12:52.000Z" color="#AB9CB7" isUnread="true"&gt;
+    &lt;one:Section name="Main" ID="{399EA51E-54B4-066E-02B4-80246CCDA75A}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\AQUA\AQUA OneNote\Main.one" lastModifiedTime="2019-11-04T20:12:52.000Z" color="#8AA8E4" isUnread="true"&gt;
+      &lt;one:Page ID="{399EA51E-54B4-066E-02B4-80246CCDA75A}{1}{E1823995233641966930220172386823089712456161}" name="Parsing concatenated strings (like FAST)" dateTime="2014-10-07T07:47:33.000Z" lastModifiedTime="2014-12-25T09:53:52.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{399EA51E-54B4-066E-02B4-80246CCDA75A}{1}{E1949963177029058190401933814155840947687861}" name="Virtual backlog" dateTime="2019-01-15T06:32:50.000Z" lastModifiedTime="2019-06-01T09:25:19.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Xeus" ID="{359BB471-A312-09CB-21E1-009DC97D9E4D}{1}{B0}" path="\\ger\ec\proj\ha\STAV\dis\AQUA\AQUA OneNote\Xeus.one" lastModifiedTime="2019-11-01T15:46:31.000Z" color="#9BBBD2"&gt;
+      &lt;one:Page ID="{359BB471-A312-09CB-21E1-009DC97D9E4D}{1}{E19574680047955410854420142881279406930464411}" name="User Stories" dateTime="2014-06-23T06:07:15.000Z" lastModifiedTime="2014-06-30T11:51:42.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="FV_Validation" nickname="FV_Validation" ID="{5B675DC1-0169-4C4F-B21D-ABCF2FA60BCE}{1}{B0}" path="https://sharepoint.ger.ith.intel.com/sites/PfvStcHsesQA/Shared Documents/Retrospective/FV_Validation/" lastModifiedTime="2019-11-01T15:47:35.000Z" color="#B7C997"&gt;
+    &lt;one:Section name="Scrum" ID="{F6B5BE94-CCA7-0A68-09DC-B40FF7219276}{1}{B0}" path="https://sharepoint.ger.ith.intel.com/sites/PfvStcHsesQA/Shared Documents/Retrospective/FV_Validation/Scrum.one" lastModifiedTime="2019-11-01T15:47:35.000Z" color="#8AA8E4"&gt;
+      &lt;one:Page ID="{F6B5BE94-CCA7-0A68-09DC-B40FF7219276}{1}{E17412449827480151141979415330114466084321}" name="R4_39_41_819" dateTime="2018-10-10T12:31:58.000Z" lastModifiedTime="2018-10-22T11:10:11.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="TRACE WORKBOOK" nickname="TRACE WORKBOOK" ID="{A73FEE13-8090-4623-92C1-6BDAD9CDF101}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK" lastModifiedTime="2019-11-07T13:41:39.000Z" color="#D5A4BB" isUnread="true"&gt;
+    &lt;one:Section name="Main" ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Main.one" lastModifiedTime="2019-11-07T05:52:37.000Z" color="#8AA8E4" isUnread="true"&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E182308370163174289611941440996809122726501}" name="Analysis, Readiness, Experiments" dateTime="2013-11-26T08:09:59.000Z" lastModifiedTime="2014-02-25T09:25:05.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E1950256062503872963541968404520537512040121}" name="Levels" dateTime="2013-12-30T08:16:34.000Z" lastModifiedTime="2014-01-16T07:59:22.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E19484073146810860097420133695509599883521561}" name="Test program data " dateTime="2014-01-12T08:34:26.000Z" lastModifiedTime="2014-01-14T11:42:26.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E19482810756033867191120109835750605271320701}" name="Personal" dateTime="2013-12-31T13:42:51.000Z" lastModifiedTime="2014-08-28T10:22:43.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E1951606320187082488301960395623339120073251}" name="RCA (Root Cause Analysis) notes" dateTime="2014-12-01T12:21:23.000Z" lastModifiedTime="2014-12-10T09:42:36.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E19493227449034509145720182745571388413920531}" name="New Developers Training - RAMP\bootcamp" dateTime="2015-08-20T10:48:03.000Z" lastModifiedTime="2018-08-30T14:49:04.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{8E4BA3A9-96F5-00FA-0839-80AF73E09080}{1}{E19461550226508176405620151212549657101029521}" name="TPTorrent" dateTime="2018-02-21T14:09:09.000Z" lastModifiedTime="2018-04-09T07:21:33.000Z" pageLevel="2" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Retrospective" ID="{98B08619-EC6D-0B1E-0BE4-F3B1F8C3C3DC}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Retrospective.one" lastModifiedTime="2019-11-04T14:41:10.000Z" color="#4DBCCA" isUnread="true"&gt;
+      &lt;one:Page ID="{98B08619-EC6D-0B1E-0BE4-F3B1F8C3C3DC}{1}{E19539927849673799147520163832600639969734461}" name="15Q2_2122" dateTime="2015-01-11T12:38:24.000Z" lastModifiedTime="2015-06-14T11:28:30.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Developer notes" ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Developer notes.one" lastModifiedTime="2019-11-05T17:14:31.000Z" color="#F5F96F" isUnread="true"&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1953061913972165878621984004317186019846471}" name="MOLE VORTEX " dateTime="2014-11-27T09:25:35.000Z" lastModifiedTime="2014-11-27T09:26:49.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1824753914037824364520110208466089893565761}" name="Pre process left to do" dateTime="2015-03-19T06:41:41.000Z" lastModifiedTime="2017-01-23T14:30:03.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1870977017779202194220180442474159286269701}" name="Design notes" dateTime="2015-07-12T12:10:27.000Z" lastModifiedTime="2015-07-12T14:23:23.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1957616677519921871201950049497351987705881}" name="static TP Compare - design" dateTime="2017-01-16T15:08:17.000Z" lastModifiedTime="2017-01-19T06:53:52.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E19556428307074476417120100920730926386571781}" name="Validation tool HL" dateTime="2017-03-29T11:29:29.000Z" lastModifiedTime="2017-04-03T11:29:54.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E188933379066027266251951474856459651064641}" name="Validation - dashboard design HL after scope reduction" dateTime="2017-06-06T11:36:09.000Z" lastModifiedTime="2017-06-06T12:25:43.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1949593842303262589341973032888446619833811}" name="Corrupted tpl cases" dateTime="2018-06-17T13:19:41.000Z" lastModifiedTime="2018-06-17T13:57:41.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{A69147C7-36A7-07B5-1BEF-741B939951B0}{1}{E1954504880173168555081919787107266617565611}" name="Excel Course" dateTime="2018-07-04T06:42:55.000Z" lastModifiedTime="2018-07-04T12:36:44.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="IxD" ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\IxD.one" lastModifiedTime="2019-11-07T12:08:07.000Z" color="#9595AA" isUnread="true"&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19471314346280436384020157507871447414706031}" name="Requests parking lot" dateTime="2015-02-24T15:15:58.000Z" lastModifiedTime="2015-12-07T12:57:58.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19491440549910311387720135418035295409701331}" name="Meetings notes, Ireland 2016 ww39" dateTime="2016-09-19T08:40:23.000Z" lastModifiedTime="2016-09-28T11:49:56.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19478337649961315902820136789812452514894221}" name="VMIN frequency changes" dateTime="2016-06-30T08:24:46.000Z" lastModifiedTime="2016-06-30T08:24:53.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19530462641890702396720114271585708920314151}" name="DTV Infrastructure Priority List - Dima - Enable Per-Core/Tile VMIN" dateTime="2017-06-14T12:07:25.000Z" lastModifiedTime="2017-07-19T10:58:20.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19465846231680679503517916483767650192731}" name="TRACE Vmin df/dv Extrapolation Calculation - meetings summary." dateTime="2018-07-05T17:18:06.000Z" lastModifiedTime="2018-07-05T17:39:45.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E1953476912985849660211915408199054576014461}" name="OnZi IxD courses summery" dateTime="2018-07-26T10:10:29.000Z" lastModifiedTime="2018-12-30T09:45:32.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19469408523851771607120178967865088605505741}" name="Personas - Try to describe/show how the person see the world" dateTime="2018-11-26T13:30:38.000Z" lastModifiedTime="2019-01-09T14:12:02.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E1954996643543031979391991729339863758335291}" name="Interview 2 : Yossi Sh" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2018-12-02T12:26:18.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E195200271998793841068181207037079395411481}" name="Test time Budget - feature request" dateTime="2018-10-17T10:36:47.000Z" lastModifiedTime="2018-10-21T06:22:37.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19563524738825148305420167952502975063648581}" name="iTUFF Size" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2018-11-05T10:17:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19464256709616679795020138098521870851971991}" name="MIDAS ITUFF size - Anton" dateTime="2018-11-05T09:08:06.000Z" lastModifiedTime="2018-11-05T09:45:54.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19477365365238045220920180557832348787209291}" name="Ituff reduction meeting (Yariv &amp;amp; POs of ICL)" dateTime="2019-01-23T12:03:48.000Z" lastModifiedTime="2019-01-23T14:56:50.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E1950859450551570258121928325366971105516831}" name="Action-Required and conclusion - Ituff reduction meeting " dateTime="2019-01-23T13:57:16.000Z" lastModifiedTime="2019-02-03T13:26:05.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19547332490645054443020116635500473665220151}" name="DFF Validation" dateTime="2019-02-14T11:15:07.000Z" lastModifiedTime="2019-02-18T12:50:19.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E1951821116979734471711982033232908889330311}" name="IntraDUT questions" dateTime="2018-10-24T08:20:25.000Z" lastModifiedTime="2019-03-24T18:34:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19488462743840242100920118136743552890011471}" name="Hamster IxD" dateTime="2019-05-23T11:55:09.000Z" lastModifiedTime="2019-10-23T13:38:46.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E195282528778727087246183524581728249668391}" name="Aviv's Research Summary" dateTime="2019-06-25T08:21:51.000Z" lastModifiedTime="2019-06-27T09:54:35.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{5E8FEC9A-6507-00C8-269B-94B835F04EA2}{1}{E19554527263549023416820114357439488309369801}" name="[UT] Zaharim, Wan Nurnabilah" dateTime="2019-10-07T07:28:12.000Z" lastModifiedTime="2019-10-22T14:07:06.000Z" pageLevel="3" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Design" ID="{5331BC82-10E9-0576-0F9A-5210F335693B}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\Design.one" lastModifiedTime="2019-11-04T11:28:33.000Z" color="#9BBBD2" isUnread="true"&gt;
+      &lt;one:Page ID="{5331BC82-10E9-0576-0F9A-5210F335693B}{1}{E1955697028033223309841993119042920662284101}" name="Vmin per Core Design" dateTime="2018-02-08T09:08:21.000Z" lastModifiedTime="2018-03-14T13:03:04.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5331BC82-10E9-0576-0F9A-5210F335693B}{1}{E1948644939454975489571963692376161149024141}" name="[Dashboard tickets system] High Level Architecture Design" dateTime="2018-10-16T08:16:30.000Z" lastModifiedTime="2018-12-18T13:42:08.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5331BC82-10E9-0576-0F9A-5210F335693B}{1}{E195383894095194802287186206549890285805091}" name="Research on EDIS Architecture structure" dateTime="2018-10-21T07:58:05.000Z" lastModifiedTime="2018-11-01T09:42:15.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5331BC82-10E9-0576-0F9A-5210F335693B}{1}{E19527905879127260076320168004413328029357231}" name="Raw Vmin support in client" dateTime="2019-08-14T06:03:49.000Z" lastModifiedTime="2019-10-06T06:50:15.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="HAMSTER" ID="{5262376A-AD51-019C-3B4B-F3EAF45892B7}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\HAMSTER.one" lastModifiedTime="2019-11-07T13:41:39.000Z" color="#9595AA" isUnread="true"&gt;
+      &lt;one:Page ID="{5262376A-AD51-019C-3B4B-F3EAF45892B7}{1}{E19469779404902456802620183765220359703282111}" name="HDMT tasks" dateTime="2018-11-14T10:54:24.000Z" lastModifiedTime="2019-06-02T11:33:42.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5262376A-AD51-019C-3B4B-F3EAF45892B7}{1}{E187896967254691482131965092491896666644611}" name="Storage sizes" dateTime="2019-05-29T12:26:21.000Z" lastModifiedTime="2019-06-02T10:45:07.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{5262376A-AD51-019C-3B4B-F3EAF45892B7}{1}{E183371631359312033831946328376699946447851}" name="Design - Wheel" dateTime="2019-07-07T11:52:14.000Z" lastModifiedTime="2019-10-22T07:59:03.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="EDIS" ID="{B4A0C19E-7C0C-0696-013D-0ADA011F900A}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\EDIS.one" lastModifiedTime="2019-11-01T15:47:55.000Z" color="#E8D199"&gt;
+      &lt;one:Page ID="{B4A0C19E-7C0C-0696-013D-0ADA011F900A}{1}{E19564380157750424298720136364396847321911251}" name="Fetch only meta data and then fetch actual data per demand for a defined prefix" dateTime="2019-01-15T07:01:07.000Z" lastModifiedTime="2019-01-15T08:25:16.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:SectionGroup name="OneNote_RecycleBin" ID="{C6D42F2A-BD85-4EA6-8C4C-A96DE5B7E061}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\OneNote_RecycleBin" lastModifiedTime="2019-11-07T05:52:31.000Z" isRecycleBin="true"&gt;
+      &lt;one:Section name="Deleted Pages" ID="{EC978313-648F-0C5E-2084-F620E4D10EFF}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\TRACE\TRACE WORKBOOK\OneNote_RecycleBin\OneNote_DeletedPages.one" lastModifiedTime="2019-11-07T05:52:31.000Z" color="#E1E1E1" isInRecycleBin="true" isDeletedPages="true"&gt;
+        &lt;one:Page ID="{EC978313-648F-0C5E-2084-F620E4D10EFF}{1}{E1949736223223267816941989190366894005579731}" name="IxD" dateTime="2019-05-23T11:55:09.000Z" lastModifiedTime="2019-10-23T13:38:34.000Z" pageLevel="2" isInRecycleBin="true" /&gt;
+        &lt;one:Page ID="{EC978313-648F-0C5E-2084-F620E4D10EFF}{1}{E1953744998003443142021970092422731458702461}" name="[UT] Zaharim, Wan Nurnabilah" dateTime="2019-10-07T07:28:12.000Z" lastModifiedTime="2019-10-22T14:07:06.000Z" pageLevel="3" isInRecycleBin="true" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+  &lt;one:Notebook name="Torch" nickname="Torch" ID="{9A344F3E-EFBC-4F49-9FF0-89F8F53F8706}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch" lastModifiedTime="2019-11-07T05:53:57.000Z" color="#F5F96F" isUnread="true"&gt;
+    &lt;one:Section name="Initial Research" ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch\Initial Research.one" lastModifiedTime="2019-11-03T07:08:15.000Z" color="#ADE792"&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953396}" name="TPD 1/4/19  " dateTime="2019-03-26T16:35:12.000Z" lastModifiedTime="2019-04-01T12:44:25.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHTV_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953397}" name="TPD 4/4/19" dateTime="2019-03-26T16:35:12.000Z" lastModifiedTime="2019-04-11T07:51:19.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHTQ_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953398}" name="TPIE Capabilities " dateTime="2019-03-24T14:23:22.000Z" lastModifiedTime="2019-04-11T14:09:18.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953399}" name="WW16 Map Day " dateTime="2019-04-17T18:23:51.000Z" lastModifiedTime="2019-04-29T11:41:37.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGGC@_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E191050922101914583478196660124506750859533100}" name="TPD 23/4 " dateTime="2019-04-23T09:52:58.000Z" lastModifiedTime="2019-04-29T10:12:25.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KGHVt_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E191050922101914583478196660124506750859533113}" name="MVP Options " dateTime="2019-05-06T13:18:45.000Z" lastModifiedTime="2019-05-14T12:26:39.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E191050922101914583478196660124506750859533114}" name="Torch plan day material " dateTime="2019-05-01T07:51:23.000Z" lastModifiedTime="2019-05-08T10:19:12.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E191050922101914583478196660124506750859533115}" name="Bin Matrix Files " dateTime="2019-05-01T07:51:23.000Z" lastModifiedTime="2019-05-06T12:06:21.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E191050922101914583478196660124506750859533121}" name="Specs" dateTime="2019-05-05T12:07:16.000Z" lastModifiedTime="2019-05-06T11:52:35.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953351}" name="Binning &amp;amp; Counters" dateTime="2019-03-27T07:58:46.000Z" lastModifiedTime="2019-04-04T10:57:25.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953352}" name="Speed flow" dateTime="2019-03-27T08:04:33.000Z" lastModifiedTime="2019-05-06T07:06:32.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953358}" name="Pattern , plists and pattern modify " dateTime="2019-03-28T11:18:59.000Z" lastModifiedTime="2019-04-23T06:53:11.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953360}" name="TP execution in ATM " dateTime="2019-04-02T09:04:19.000Z" lastModifiedTime="2019-04-04T10:33:56.000Z" pageLevel="2"&gt;
+        &lt;one:Meta name="OutlookEntryHash" content="[J{KLWDS_Ejzx" /&gt;
+      &lt;/one:Page&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953361}" name="Feedback from Ali and his team on the demo" dateTime="2019-04-15T06:55:51.000Z" lastModifiedTime="2019-04-15T10:25:39.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953366}" name="TOS requirements" dateTime="2019-04-18T12:05:20.000Z" lastModifiedTime="2019-04-28T14:14:36.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953367}" name="PLT" dateTime="2019-05-01T20:03:15.000Z" lastModifiedTime="2019-05-01T21:07:30.000Z" pageLevel="2" /&gt;
+      &lt;one:Page ID="{8D19C778-3366-0AFE-0EA0-44EA45F6FFE9}{1}{E19105092210191458347819666012450675085953369}" name="PLT - planning day summary " dateTime="2019-05-01T20:18:29.000Z" lastModifiedTime="2019-06-12T09:23:19.000Z" pageLevel="3" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="Dev notes" ID="{902264A2-9D35-0455-0A9D-20AC1EC45788}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch\Dev notes.one" lastModifiedTime="2019-11-05T10:35:59.000Z" color="#8AA8E4" isUnread="true"&gt;
+      &lt;one:Page ID="{902264A2-9D35-0455-0A9D-20AC1EC45788}{1}{E1956702048484513496841991336790620100617131}" name="Collaboration with TRACE" dateTime="2019-06-30T06:50:25.000Z" lastModifiedTime="2019-06-30T07:51:45.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:Section name="UxD Interviews" ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch\UxD Interviews.one" lastModifiedTime="2019-11-01T15:52:42.000Z" color="#F6B078"&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E189599449996044201551936621960748473462011}" name="Interview points" dateTime="2019-09-08T09:35:24.000Z" lastModifiedTime="2019-09-11T06:47:38.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E189258575485556352771913499709579892736021}" name="List of people to interview:" dateTime="2019-07-02T07:22:57.000Z" lastModifiedTime="2019-10-02T11:16:28.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E181543911914249503451977733699666005724291}" name="Interview" dateTime="2019-08-29T07:42:03.000Z" lastModifiedTime="2019-09-15T08:20:15.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1825055043818036161720145897992510732423901}" name="Richard Crossly" dateTime="2019-09-02T09:05:26.000Z" lastModifiedTime="2019-09-08T09:40:44.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E184704347987052720141971821798368155681381}" name="Murphy, Andrew" dateTime="2019-09-02T10:04:55.000Z" lastModifiedTime="2019-10-03T10:53:21.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E188173440716933917491916128492175744079871}" name="Gilly Gazit" dateTime="2019-09-05T11:09:08.000Z" lastModifiedTime="2019-10-03T10:54:47.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1833964784999829643220169435952755273439221}" name="Jason Mcdaniel" dateTime="2019-09-05T13:04:29.000Z" lastModifiedTime="2019-10-03T11:44:42.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1819605250756322253120150687777909571346251}" name="James (Hong Thai)" dateTime="2019-09-10T06:26:44.000Z" lastModifiedTime="2019-10-03T11:50:40.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E185124669104011477361950639127198725888491}" name="Villalobos, Bryan" dateTime="2019-09-10T15:04:26.000Z" lastModifiedTime="2019-10-06T09:41:15.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E189705849931140858851968949844051129175591}" name="Zumbado, Gustavo A" dateTime="2019-09-10T16:55:33.000Z" lastModifiedTime="2019-10-06T09:42:25.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1835840874669317942520134488473314969807551}" name="Chong, Kong Choon (KC)" dateTime="2019-09-11T06:01:51.000Z" lastModifiedTime="2019-09-11T06:55:00.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E191127169736141421820189253199677666196911}" name="Keren Fadida" dateTime="2019-09-11T08:06:37.000Z" lastModifiedTime="2019-10-06T09:54:58.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E183734532933824854371974972343998365565551}" name="Alex Vinichuk" dateTime="2019-09-11T10:04:18.000Z" lastModifiedTime="2019-10-06T09:58:56.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1910161669796183246741981171052680372933301}" name="Carmit Tourman" dateTime="2019-09-11T10:56:52.000Z" lastModifiedTime="2019-10-06T14:08:29.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1881328458255358450620125937388261136540481}" name="Beh, Eng Chin - work with his team!" dateTime="2019-09-12T07:02:18.000Z" lastModifiedTime="2019-09-26T08:40:03.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E19100129863134248340820156617967057236298291}" name="Hoang  - Ho, Nguyen Huy Hoang" dateTime="2019-09-16T09:00:52.000Z" lastModifiedTime="2019-10-06T14:37:08.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E19111331324280991604720154400829467144179541}" name="Baruch Naim" dateTime="2019-09-18T13:06:21.000Z" lastModifiedTime="2019-10-06T14:52:46.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E181356048581741685431919832252139992878321}" name="Warner" dateTime="2019-09-18T15:02:30.000Z" lastModifiedTime="2019-10-06T16:58:06.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1863415969882002035820105145156136461514461}" name="James Scanlon" dateTime="2019-09-18T16:03:14.000Z" lastModifiedTime="2019-10-06T17:00:31.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E19568942534284979277420115347974516456096241}" name="Brian Smith A" dateTime="2019-08-29T07:42:03.000Z" lastModifiedTime="2019-10-06T17:11:26.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1887931616985234773120111824153556619120891}" name="Ty, Sunny R" dateTime="2019-09-18T18:58:51.000Z" lastModifiedTime="2019-10-06T17:15:41.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E186926329756363258441974236780213427300311}" name="Penmatsa, Lakshmi" dateTime="2019-09-19T14:55:18.000Z" lastModifiedTime="2019-09-25T10:20:41.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E17863381752592312041932528095801364336661}" name="Osnat Ohana" dateTime="2019-10-02T07:00:42.000Z" lastModifiedTime="2019-10-02T07:43:00.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E1827430568529864859020104477258471795261851}" name="Thwing, James" dateTime="2019-10-02T15:04:12.000Z" lastModifiedTime="2019-10-06T17:26:09.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E18216393317995919769188308526094462904501}" name="Zoheir Maroon" dateTime="2019-10-06T07:02:35.000Z" lastModifiedTime="2019-10-06T07:56:08.000Z" pageLevel="1" /&gt;
+      &lt;one:Page ID="{638AC0C3-17E3-09E0-3BD1-F3FB1AD6B2B1}{1}{E182989135499469186561967112831811022563851}" name="eachSummary" dateTime="2019-10-06T17:26:21.000Z" lastModifiedTime="2019-10-07T11:46:40.000Z" pageLevel="1" /&gt;
+    &lt;/one:Section&gt;
+    &lt;one:SectionGroup name="OneNote_RecycleBin" ID="{59215213-88E3-4B84-AE99-F132BE40BA62}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch\OneNote_RecycleBin" lastModifiedTime="2019-11-04T08:33:59.000Z" isRecycleBin="true"&gt;
+      &lt;one:Section name="Deleted Pages" ID="{6AA55B0C-35D4-0488-28AA-68647BE7AAC4}{1}{B0}" path="\\ger.corp.intel.com\ec\proj\ha\STAV\dis\Torch\onenote\Torch\OneNote_RecycleBin\OneNote_DeletedPages.one" lastModifiedTime="2019-11-04T08:33:59.000Z" color="#E1E1E1" isInRecycleBin="true" isDeletedPages="true"&gt;
+        &lt;one:Page ID="{6AA55B0C-35D4-0488-28AA-68647BE7AAC4}{1}{E19514986887555848087820113541053716245989391}" name="Paladino, Justin A*" dateTime="2019-09-10T16:03:10.000Z" lastModifiedTime="2019-09-15T08:17:05.000Z" pageLevel="1" isInRecycleBin="true" /&gt;
+      &lt;/one:Section&gt;
+    &lt;/one:SectionGroup&gt;
+  &lt;/one:Notebook&gt;
+&lt;/one:Notebooks&gt;</value>
+  </data>
+</root>

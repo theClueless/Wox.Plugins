@@ -3,6 +3,7 @@ using System.Dynamic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Wox.Plugin;
+using Wox.Plugin.Test.Common;
 
 namespace Wox.WhatupPlugin.Test
 {
@@ -59,13 +60,5 @@ namespace Wox.WhatupPlugin.Test
         }
     }
 
-    public static class QueryBuilder
-    {
-        public static Query Create(string query, string action = "")
-        {
-            var fullquery = action == "" ? query : $"{action} {query}";
-            var splitted = fullquery.Split(' ');
-            return new Query(fullquery, query, splitted, action);
-        }
-    }
+  
 }
