@@ -12,7 +12,10 @@ namespace Wox.Plugin.OneNote99
         public OneNoteCache(IOneNoteApi api)
         {
             _api = api;
-            _api.OneNoteDataChanged+= ApiOnOneNoteDataChanged;
+            if (_api.IsTrackingChanges)
+            {
+                _api.OneNoteDataChanged += ApiOnOneNoteDataChanged;
+            }
         }
 
         private void ApiOnOneNoteDataChanged(object sender, EventArgs e)
@@ -67,7 +70,10 @@ namespace Wox.Plugin.OneNote99
 
         public void Dispose()
         {
-            _api.OneNoteDataChanged -= ApiOnOneNoteDataChanged;
+            if (_api.IsTrackingChanges)
+            {
+                _api.OneNoteDataChanged -= ApiOnOneNoteDataChanged;
+            }
         }
     }
 }

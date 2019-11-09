@@ -12,6 +12,8 @@ namespace Wox.Plugin.OneNote99
         void NavigateTo(string objectId);
         XDocument GetAllPages();
 
+        bool IsTrackingChanges { get; }
+
         event EventHandler OneNoteDataChanged;
     }
 
@@ -62,6 +64,8 @@ namespace Wox.Plugin.OneNote99
             _app.GetHierarchy(null, HierarchyScope.hsPages, out string strXML);
             return XDocument.Parse(strXML);
         }
+
+        public bool IsTrackingChanges => _shouldTrackOneNote;
 
         public void Dispose()
         {
