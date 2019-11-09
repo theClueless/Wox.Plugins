@@ -31,7 +31,7 @@ namespace Wox.Plugin.ProcessKiller
 
         public List<Result> Query(Query query)
         {
-            var termToSearch = query.Terms.Length == 0
+            var termToSearch = query.Terms.Length == 1
                 ? null
                 : query.FirstSearch.ToLower();
             var processlist = GetProcesslist(termToSearch);

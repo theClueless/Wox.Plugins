@@ -1,6 +1,10 @@
 {
   "ID": "F89D1BE8F5EA40C7A3F592C8422B0C75",
   "ActionKeyword": "one",
+  //"ActionKeywords": [
+  //        "one",
+  //        "bd"
+  //    ],
   "Name": "Wox.Plugin.OneNote",
   "Description": "open one notes pages using url",
   "Author": "atepper",
