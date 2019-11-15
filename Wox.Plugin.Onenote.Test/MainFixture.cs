@@ -18,21 +18,22 @@ namespace Wox.Plugin.Onenote.Test
         {
             // arrange
             var doc = XDocument.Parse(Properties.Resources.TodayStringResult);
-            var apiMock = Mock.Of<IOneNoteApi>(x => x.FindPages("today") == doc);
+            var apiMock = Mock.Of<IOneNoteApi>(x => x.GetAllPages() == doc);
             var main = new Main(apiMock);
 
             // act
+            main.Init(null);
             var res = main.Query(QueryBuilder.Create("today"));
-            
+
             // assert
-            Assert.IsTrue(res.Count == 1);
-            var result = res.First();
+            Assert.IsTrue(res.Count == 3);
+            var result = res.OrderByDescending(x=>x.Score).First();
 
             Assert.AreEqual("Today", result.Title);
             Assert.AreEqual("General\\Work general", result.SubTitle);
 
             var actionRes = result.Action.Invoke(new ActionContext());
-            Mock.Get(apiMock).Verify(x=>x.NavigateTo(It.IsAny<string>()), Times.Once());
+            Mock.Get(apiMock).Verify(x => x.NavigateTo(It.IsAny<string>()), Times.Once());
         }
 
         // new Query("")

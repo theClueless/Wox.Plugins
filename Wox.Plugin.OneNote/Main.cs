@@ -6,18 +6,31 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.OneNote;
 using Wox.Infrastructure;
+using Wox.Infrastructure.Logger;
 
 namespace Wox.Plugin.OneNote99
 {
     public class Main : IPlugin
     {
         private string IconImagePath = "Images\\onenote.png";
-        private readonly IOneNoteApi _oneNoteApi;
+        private IOneNoteApi _oneNoteApi;
         private OneNoteCache _cache;
 
         public Main()
         {
-            _oneNoteApi = new OneNoteApi();
+            CreateApi();
+        }
+
+        private void CreateApi()
+        {
+            try
+            {
+                _oneNoteApi = new OneNoteApi();
+            }
+            catch (Exception e)
+            {
+                Log.Exception("Fail to create onenote API", e);
+            }
         }
 
         public Main(IOneNoteApi api)
@@ -36,21 +49,36 @@ namespace Wox.Plugin.OneNote99
         public List<Result> Query(Query query)
         {
             var results = new List<Result>();
-            
+
+            if (_oneNoteApi == null)
+            {
+                results.Add(new Result
+                {
+                    Title = "Recreate API",
+                    Action = c =>
+                    {
+                        this.ReCreateApi();
+                        return true;
+                    }
+                });
+
+                return results;
+            }
+
             var queryString = query.Search;
 
             if (queryString == "")
             {
                 results.Add(new Result
-                {
-                    Title = "Reload Cache",
-                    Action = c =>
                     {
-                        _cache.ReloadCache();
-                        return true;
-                    }
-                });
-
+                        Title = "Reload Cache",
+                        Action = c =>
+                        {
+                            _cache.ReloadCache();
+                            return true;
+                        }
+                    });
+                
                 return results;
             }
 
@@ -64,8 +92,6 @@ namespace Wox.Plugin.OneNote99
                 }
             }
             
-
-            // FindUsingOneNoteApi(queryString, results);
             return results;
         }
 
@@ -122,8 +148,27 @@ namespace Wox.Plugin.OneNote99
 
         public void Init(PluginInitContext context)
         {
+            if (_oneNoteApi == null)
+            {
+                return;
+            }
+
+            CreateCache();
+        }
+
+        private void CreateCache()
+        {
             _cache = new OneNoteCache(_oneNoteApi);
             _cache.ReloadCache();
+        }
+
+        private void ReCreateApi()
+        {
+            CreateApi();
+            if (_oneNoteApi != null)
+            {
+                CreateCache();
+            }
         }
 
 
