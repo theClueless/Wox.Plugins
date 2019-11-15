@@ -3,6 +3,7 @@ using System.Net.Mime;
 using System.Threading;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.OneNote;
+using Wox.Infrastructure.Logger;
 
 namespace Wox.Plugin.OneNote99
 {
@@ -56,13 +57,29 @@ namespace Wox.Plugin.OneNote99
 
         public void NavigateTo(string objectId)
         {
-            _app.NavigateTo(objectId);
+            try
+            {
+                _app.NavigateTo(objectId);
+            }
+            catch (Exception e)
+            {
+                Log.Exception($"Fail to navigate to page: {objectId}", e);
+            }
+            
         }
 
         public XDocument GetAllPages()
         {
-            _app.GetHierarchy(null, HierarchyScope.hsPages, out string strXML);
-            return XDocument.Parse(strXML);
+            try
+            {
+                _app.GetHierarchy(null, HierarchyScope.hsPages, out string strXML);
+                return XDocument.Parse(strXML);
+            }
+            catch (Exception e)
+            {
+                Log.Exception("Fail to get all pages", e);
+                throw;
+            }
         }
 
         public bool IsTrackingChanges => _shouldTrackOneNote;
