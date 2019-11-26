@@ -100,6 +100,8 @@ namespace Wox.Plugin.OneNote99
         public string Name { get; set; }
 
         public string Id { get; set; }
+
+        public int PageLevel { get; set; }
     }
 
     // onenote xml result:

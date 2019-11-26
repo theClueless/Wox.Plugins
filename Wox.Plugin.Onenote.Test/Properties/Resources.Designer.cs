@@ -62,12 +62,13 @@ namespace Wox.Plugin.Onenote.Test.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;one:Notebooks xmlns:one=&quot;http://schemas.microsoft.com/office/onenote/2013/onenote&quot;&gt;
-        ///  &lt;one:Notebook name=&quot;My Notebook&quot; nickname=&quot;My Notebook&quot; ID=&quot;{AFF6CE2D-8188-45C8-9829-6FAC1CB66023}{1}{B0}&quot; path=&quot;C:\Users\atepper\Documents\OneNote Notebooks\My Notebook&quot; lastModifiedTime=&quot;2019-11-07T10:49:38.000Z&quot; color=&quot;#B7C997&quot;&gt;
-        ///    &lt;one:Section name=&quot;Quick Notes&quot; ID=&quot;{54DADC52-B1C5-02DF-0F93-7E8525D86438}{1}{B0}&quot; path=&quot;C:\Users\atepper\Documents\OneNote Notebooks\My Notebook\Quick Notes.one&quot; lastModifiedTime=&quot;2019-1 [rest of string was truncated]&quot;;.
+        ///  &lt;one:Notebook name=&quot;notebook1&quot; nickname=&quot;notebook1&quot; ID=&quot;{9F1B9187-5FB0-4E92-8631-0E6521CC9437}{1}{B0}&quot; lastModifiedTime=&quot;2019-11-07T19:43:03.000Z&quot; color=&quot;#8AA8E4&quot;&gt;
+        ///    &lt;one:Section name=&quot;Section 1&quot; ID=&quot;{6D837AA3-08A0-F3A7-349D-EDC2654A5900}{1}{B0}&quot; path=&quot;c:/temp/place/New Section 2.one&quot; lastModifiedTime=&quot;2019-11-03T07:08:06.000Z&quot; color=&quot;#8AA8E4&quot;&gt;
+        ///      &lt;one:Page ID=&quot;{6D837AA3-08A0-F3A7-349D-EDC2654A5900}{1}{E2017269343 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string TodayStringResult {
+        internal static string BasicResult {
             get {
-                return ResourceManager.GetString("TodayStringResult", resourceCulture);
+                return ResourceManager.GetString("BasicResult", resourceCulture);
             }
         }
     }

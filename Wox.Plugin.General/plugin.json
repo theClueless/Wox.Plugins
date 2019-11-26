@@ -1,7 +1,8 @@
 {
     "ID":"C7334D2FF1CD227DBB7386E25BCD3EFD",
 	"ActionKeywords": [
-          "word"
+        "word", 
+        "*"
       ],
     "Name":"General plugin",
     "Description":"General Plugin",

@@ -17,24 +17,25 @@ namespace Wox.Plugin.Onenote.Test
         public void QueryTest_SimpleSuccessfull()
         {
             // arrange
-            var doc = XDocument.Parse(Properties.Resources.TodayStringResult);
+            var doc = XDocument.Parse(Properties.Resources.BasicResult);
             var apiMock = Mock.Of<IOneNoteApi>(x => x.GetAllPages() == doc);
             var main = new Main(apiMock);
 
             // act
             main.Init(null);
-            var res = main.Query(QueryBuilder.Create("today"));
+            var res = main.Query(QueryBuilder.Create("Untitled"));
 
             // assert
-            Assert.IsTrue(res.Count == 3);
+            Assert.IsTrue(res.Count == 1);
             var result = res.OrderByDescending(x=>x.Score).First();
 
-            Assert.AreEqual("Today", result.Title);
-            Assert.AreEqual("General\\Work general", result.SubTitle);
+            Assert.AreEqual("Untitled page", result.Title);
+            Assert.AreEqual("notebook1\\Section 1", result.SubTitle);
 
             var actionRes = result.Action.Invoke(new ActionContext());
             Mock.Get(apiMock).Verify(x => x.NavigateTo(It.IsAny<string>()), Times.Once());
         }
+
 
         // new Query("")
         // var t = main.Query("today");
@@ -43,7 +44,7 @@ namespace Wox.Plugin.Onenote.Test
         // var doc = new XDocument(strXML);
         // Clipboard.SetText(strXML)
 
-        [TestMethod]
+        // [TestMethod]
         public void QueryTest_SimpleSuccessfull2()
         {
             OneNoteApi api = new OneNoteApi();

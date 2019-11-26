@@ -50,6 +50,7 @@
     <Compile Include="IOneNoteApi.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="OneNoteCache.cs" />
+    <Compile Include="OneNoteXmlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

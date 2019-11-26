@@ -84,8 +84,10 @@ namespace Wox.Plugin.OneNote99
 
             foreach (var entry in _cache.GetCache())
             {
-                var score = StringMatcher.FuzzySearch(queryString, entry.Name).Score;
-                if (score > 20)
+                var score = StringMatcher.FuzzySearch(queryString, entry.Name).Score + 10;
+                var score2 = StringMatcher.FuzzySearch(queryString, entry.Hierarchy).Score;
+                var totalScore = Math.Max(score2, score);
+                if (totalScore > 20)
                 {
                     var res = CreateResult(entry.Name, entry.Id, entry.Hierarchy, score);
                     results.Add(res);
@@ -98,12 +100,12 @@ namespace Wox.Plugin.OneNote99
         private void FindUsingOneNoteApi(string queryString, List<Result> results)
         {
             var doc = _oneNoteApi.FindPages(queryString);
-            var pagesContainQuery = doc.Descendants().Where(x => GetName(x)?.ToLower().Contains(queryString) ?? false);
+            var pagesContainQuery = doc.Descendants().Where(x => OneNoteXmlHelper.GetName(x)?.ToLower().Contains(queryString) ?? false);
             foreach (var xElement in pagesContainQuery)
             {
-                var name = GetName(xElement);
-                var id = GetId(xElement);
-                var h = GetFullNameHierarchy(xElement);
+                var name = OneNoteXmlHelper.GetName(xElement);
+                var id = OneNoteXmlHelper.GetId(xElement);
+                var h = OneNoteXmlHelper.GetFullNameHierarchy(xElement);
                 var score = StringMatcher.FuzzySearch(queryString, name).Score;
                 var res = CreateResult(name, id, h, score);
                 results.Add(res);
@@ -124,26 +126,6 @@ namespace Wox.Plugin.OneNote99
                     return true;
                 }
             };
-        }
-
-        public static string GetId(XElement xElement)
-        {
-            return xElement.Attribute(OneNoteApi.IDAttribute)?.Value;
-        }
-
-        public static string GetName(XElement element) => element.Attribute(OneNoteApi.NameAttribute)?.Value;
-
-        public static string GetFullNameHierarchy(XElement xElement)
-        {
-            var name = "";
-            xElement = xElement?.Parent;
-            while (xElement != null)
-            {
-                name = GetName(xElement) + '\\' + name;
-                xElement = xElement.Parent;
-            }
-
-            return name.Trim('\\');
         }
 
         public void Init(PluginInitContext context)
