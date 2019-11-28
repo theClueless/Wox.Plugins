@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Wox.Infrastructure;
+using Wox.Infrastructure.Logger;
 
 namespace Wox.Plugin.General
 {
@@ -43,6 +48,35 @@ namespace Wox.Plugin.General
                     var result = CreateCountResultFromString(stringToCount, fromClip);
                     list.Add(result);
                 }
+            }
+
+            if (query.FirstSearch.ToLower() == "logs")
+            {
+                var logFolder = Path.Combine(Constant.DataDirectory, Log.DirectoryName, Constant.Version);
+                if (Directory.Exists(logFolder))
+                {
+                    var latestLogFile = Directory.GetFiles(logFolder)
+                        .Select(x => new FileInfo(x))
+                        .OrderByDescending(y => y.LastWriteTimeUtc)
+                        .FirstOrDefault();
+                    if (latestLogFile != null)
+                    {
+                        var logsResult = new Result
+                            {
+                                Title = "Log File",
+                                SubTitle = "Open Latest Log File",
+                                IcoPath = logFolder,
+                                Action = c =>
+                                {
+                                    Process.Start(latestLogFile.FullName);
+                                    return true;
+                                }
+                            };
+                        list.Add(logsResult);
+                    }
+                }
+
+                
             }
 
             return list;

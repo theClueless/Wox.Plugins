@@ -10,7 +10,7 @@ using Wox.Infrastructure.Logger;
 
 namespace Wox.Plugin.OneNote99
 {
-    public class Main : IPlugin
+    public class Main : IPlugin, IReloadable
     {
         private string IconImagePath = "Images\\onenote.png";
         private IOneNoteApi _oneNoteApi;
@@ -154,6 +154,9 @@ namespace Wox.Plugin.OneNote99
         }
 
 
-        
+        public void ReloadData()
+        {
+            _cache.ReloadCache();
+        }
     }
 }
