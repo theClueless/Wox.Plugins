@@ -102,6 +102,8 @@ namespace Wox.Plugin.OneNote99
         public string Id { get; set; }
 
         public int PageLevel { get; set; }
+
+        public string FullName => $"{Hierarchy}\\{Name}";
     }
 
     // onenote xml result:

@@ -85,7 +85,7 @@ namespace Wox.Plugin.OneNote99
             foreach (var entry in _cache.GetCache())
             {
                 var score = StringMatcher.FuzzySearch(queryString, entry.Name).Score + 10;
-                var score2 = StringMatcher.FuzzySearch(queryString, entry.Hierarchy).Score;
+                var score2 = StringMatcher.FuzzySearch(queryString, entry.FullName).Score;
                 var totalScore = Math.Max(score2, score);
                 if (totalScore > 20)
                 {
