@@ -115,7 +115,10 @@ namespace Wox.Plugin.ProcessKiller
                 {
                     if (FilterSystemProcesses(p)) continue;
                     var score = StringMatcher.FuzzySearch(termToSearch, p.ProcessName + p.Id).ScoreAfterSearchPrecisionFilter();
-                    processlist.Add(new ProcessResult(p, score));
+                    if (score > 0)
+                    {
+                        processlist.Add(new ProcessResult(p, score));
+                    }
                 }
             }
 
