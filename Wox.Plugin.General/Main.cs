@@ -11,8 +11,12 @@ namespace Wox.Plugin.General
     public class Main : IPlugin
     {
         public const string CountActionKeyword = "word";
+        public const string LogsKeyword = "logs";
+        public const string MemoryKeyword = "mem";
 
         private readonly IClipboardHelper _clipboardHelper;
+        private readonly ILanguageFixerHandler _languageFixerHandler;
+        private IPublicAPI _publicApi;
 
         public Main()
         {
@@ -20,11 +24,17 @@ namespace Wox.Plugin.General
             {
                 _clipboardHelper = new ClipboardHelper();
             }
+
+            if (_languageFixerHandler == null)
+            {
+                _languageFixerHandler = new LanguageFixerHandler();
+            }
         }
 
-        public Main(IClipboardHelper clipboardHelper) : this()
+        public Main(IClipboardHelper clipboardHelper, ILanguageFixerHandler fixerHandler) : this()
         {
             _clipboardHelper = clipboardHelper;
+            _languageFixerHandler = fixerHandler;
         }
 
         public List<Result> Query(Query query)
@@ -50,36 +60,78 @@ namespace Wox.Plugin.General
                 }
             }
 
-            if (query.FirstSearch.ToLower() == "logs")
+            switch (query.FirstSearch.ToLower())
             {
-                var logFolder = Path.Combine(Constant.DataDirectory, Log.DirectoryName, Constant.Version);
-                if (Directory.Exists(logFolder))
-                {
-                    var latestLogFile = Directory.GetFiles(logFolder)
-                        .Select(x => new FileInfo(x))
-                        .OrderByDescending(y => y.LastWriteTimeUtc)
-                        .FirstOrDefault();
-                    if (latestLogFile != null)
-                    {
-                        var logsResult = new Result
-                            {
-                                Title = "Log File",
-                                SubTitle = "Open Latest Log File",
-                                IcoPath = logFolder,
-                                Action = c =>
-                                {
-                                    Process.Start(latestLogFile.FullName);
-                                    return true;
-                                }
-                            };
-                        list.Add(logsResult);
-                    }
-                }
-
-                
+                case LogsKeyword:
+                    LogsCommandHandler(list);
+                    break;
+                case MemoryKeyword:
+                    MemoryCommandHandler(list, _publicApi);
+                    break;
             }
+            
+            TryFixLanguage(query, list);
 
             return list;
+        }
+
+        private void MemoryCommandHandler(List<Result> list, IPublicAPI publicApi)
+        {
+            var process = Process.GetCurrentProcess();
+            process.Refresh();
+            var memorySizeInMB = (process.WorkingSet64 / 1024) / 1024;
+            var result = new Result
+            {
+                Score = 200,
+                Title = $"Memory: {memorySizeInMB} MB",
+                Action = c =>
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    GC.Collect();
+                    publicApi.ChangeQuery(MemoryKeyword, true);
+                    return false;
+                }
+
+            };
+
+            list.Add(result);
+        }
+
+        private void TryFixLanguage(Query query, List<Result> list)
+        {
+            var res = _languageFixerHandler.TryFix(query, _publicApi);
+            if (res != null)
+            {
+                list.Add(res);
+            }
+        }
+
+        private static void LogsCommandHandler(List<Result> list)
+        {
+            var logFolder = Path.Combine(Constant.DataDirectory, Log.DirectoryName, Constant.Version);
+            if (Directory.Exists(logFolder))
+            {
+                var latestLogFile = Directory.GetFiles(logFolder)
+                    .Select(x => new FileInfo(x))
+                    .OrderByDescending(y => y.LastWriteTimeUtc)
+                    .FirstOrDefault();
+                if (latestLogFile != null)
+                {
+                    var logsResult = new Result
+                    {
+                        Title = "Log File",
+                        SubTitle = "Open Latest Log File",
+                        IcoPath = logFolder,
+                        Action = c =>
+                        {
+                            Process.Start(latestLogFile.FullName);
+                            return true;
+                        }
+                    };
+                    list.Add(logsResult);
+                }
+            }
         }
 
         private static Result CreateCountResultFromString(string stringToCount, bool fromClip)
@@ -104,8 +156,7 @@ namespace Wox.Plugin.General
 
         public void Init(PluginInitContext context)
         {
+            _publicApi = context.API;
         }
     }
-
-
 }

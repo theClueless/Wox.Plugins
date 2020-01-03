@@ -7,6 +7,8 @@ namespace Wox.Plugin.General
     public interface IClipboardHelper
     {
         string GetClipboardText();
+
+        void SetClipboardText(string text);
     }
 
     public class ClipboardHelper : IClipboardHelper
@@ -37,6 +39,11 @@ namespace Wox.Plugin.General
             }
 
             return text;
+        }
+
+        public void SetClipboardText(string text)
+        {
+            Clipboard.SetText(text);
         }
     }
 }
