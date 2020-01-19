@@ -1,12 +1,12 @@
 {
-    "ID":"90C64FCAF3394919ADFA932E1734200C",
-    "ActionKeyword":"kill",
-    "Name":"Wox.Plugin.ProcessKiller",
-    "Description":"make easy to kill process",
-    "Author":"atepper, based on cxfksword process-killer",
-    "Version":"1.1.0",
-    "Language":"csharp",
-    "Website":"https://github.com/theClueless/Wox.Plugins",
-    "IcoPath": "Images\\app.png", 
-    "ExecuteFileName":"Wox.Plugin.ProcessKiller.dll"
+  "ID": "90C64FCAF3394919ADFA932E1734200C",
+  "ActionKeyword": "kill",
+  "Name": "Wox.Plugin.ProcessKiller",
+  "Description": "make easy to kill process",
+  "Author": "original:cxfksword, updated by:atepper",
+  "Version": "1.1.0",
+  "Language": "csharp",
+  "Website": "https://github.com/theClueless/Wox.Plugins",
+  "IcoPath": "Images\\app.png",
+  "ExecuteFileName": "Wox.Plugin.ProcessKiller.dll"
 }

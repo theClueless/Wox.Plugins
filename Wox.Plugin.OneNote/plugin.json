@@ -1,16 +1,12 @@
 {
   "ID": "F89D1BE8F5EA40C7A3F592C8422B0C75",
   "ActionKeyword": "one",
-  //"ActionKeywords": [
-  //        "one",
-  //        "bd"
-  //    ],
   "Name": "Wox.Plugin.OneNote",
   "Description": "open one notes pages using url",
   "Author": "atepper",
   "Version": "1.0.0",
   "Language": "csharp",
-  "Website": "https://github.com/nothaveitYet",
+  "Website": "https://github.com/theClueless/Wox.Plugins",
   "IcoPath": "Images\\onenote.png",
   "ExecuteFileName": "Wox.Plugin.OneNote.dll"
 }

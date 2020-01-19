@@ -1,15 +1,15 @@
 {
-    "ID":"C7334D2FF1CD227DBB7386E25BCD3EFD",
-	"ActionKeywords": [
-        "word", 
-        "*"
-      ],
-    "Name":"General plugin",
-    "Description":"General Plugin",
-    "Author":"atepper",
-    "Version":"1.0.0",
-    "Language":"csharp",
-    "Website":"https://github.com/Wox-launcher/Wox",
-    "ExecuteFileName":"Wox.Plugin.General.dll",
-    "IcoPath":"Images\\count.png"
+  "ID": "C7334D2FF1CD227DBB7386E25BCD3EFD",
+  "ActionKeywords": [
+    "word",
+    "*"
+  ],
+  "Name": "General plugin",
+  "Description": "General Plugin",
+  "Author": "atepper",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/theClueless/Wox.Plugins",
+  "ExecuteFileName": "Wox.Plugin.General.dll",
+  "IcoPath": "Images\\count.png"
 }
