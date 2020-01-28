@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Wox.Plugin.OneNote99;
 using Microsoft.Office.Interop.OneNote;
 using Moq;
+using Wox.Plugin.OneNote;
 using Wox.Plugin.Test.Common;
 
 namespace Wox.Plugin.Onenote.Test

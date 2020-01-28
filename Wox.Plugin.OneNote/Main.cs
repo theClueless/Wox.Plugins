@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using Microsoft.Office.Interop.OneNote;
 using Wox.Infrastructure;
 using Wox.Infrastructure.Logger;
+using Wox.Plugin.OneNote99;
 
-namespace Wox.Plugin.OneNote99
+namespace Wox.Plugin.OneNote
 {
     public class Main : IPlugin, IReloadable
     {
@@ -29,7 +27,7 @@ namespace Wox.Plugin.OneNote99
             }
             catch (Exception e)
             {
-                Log.Exception("Fail to create onenote API", e);
+                LogException("Fail to create onenote API", e);
             }
         }
 
@@ -153,10 +151,14 @@ namespace Wox.Plugin.OneNote99
             }
         }
 
-
         public void ReloadData()
         {
             _cache.ReloadCache();
+        }
+
+        public static void LogException(string message, Exception e)
+        {
+            Log.Exception($"|OneNotePlugin|{message ?? "No Message"}", e);
         }
     }
 }

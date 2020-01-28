@@ -4,6 +4,7 @@ using System.Threading;
 using System.Xml.Linq;
 using Microsoft.Office.Interop.OneNote;
 using Wox.Infrastructure.Logger;
+using Wox.Plugin.OneNote;
 
 namespace Wox.Plugin.OneNote99
 {
@@ -20,7 +21,6 @@ namespace Wox.Plugin.OneNote99
 
     public class OneNoteApi : IOneNoteApi
     {
-        private readonly bool _shouldTrackOneNote;
         public const string IDAttribute = "ID";
         public const string NameAttribute = "name";
 
@@ -36,15 +36,15 @@ namespace Wox.Plugin.OneNote99
 
         public OneNoteApi(bool shouldTrackOneNote = false)
         {
-            _shouldTrackOneNote = shouldTrackOneNote;
+            IsTrackingChanges = shouldTrackOneNote;
             _app = new Application();
-            if(_shouldTrackOneNote)
+            if(IsTrackingChanges)
             {
-                _app.OnHierarchyChange+= oneNoteHierarcyChange;
+                _app.OnHierarchyChange+= OneNoteHierarcyChange;
             }
         }
 
-        private void oneNoteHierarcyChange(string id)
+        private void OneNoteHierarcyChange(string id)
         {
             OnOneNoteDataChanged(new EventArgs());
         }
@@ -63,9 +63,8 @@ namespace Wox.Plugin.OneNote99
             }
             catch (Exception e)
             {
-                Log.Exception($"Fail to navigate to page: {objectId}", e);
+                Main.LogException($"Fail to navigate to page: {objectId}", e);
             }
-            
         }
 
         public XDocument GetAllPages()
@@ -77,18 +76,18 @@ namespace Wox.Plugin.OneNote99
             }
             catch (Exception e)
             {
-                Log.Exception("Fail to get all pages", e);
+                Main.LogException("Fail to get all pages", e);
                 throw;
             }
         }
 
-        public bool IsTrackingChanges => _shouldTrackOneNote;
+        public bool IsTrackingChanges { get; }
 
         public void Dispose()
         {
-            if (_shouldTrackOneNote)
+            if (IsTrackingChanges)
             {
-                _app.OnHierarchyChange -= oneNoteHierarcyChange;
+                _app.OnHierarchyChange -= OneNoteHierarcyChange;
             }
         }
     }

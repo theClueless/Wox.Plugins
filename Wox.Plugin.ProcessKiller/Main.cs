@@ -71,7 +71,7 @@ namespace Wox.Plugin.ProcessKiller
                     IcoPath = "Images\\app.png",
                     Title = "kill all \"" + termToSearch + "\" process",
                     SubTitle = "",
-                    Score = 100,
+                    Score = 200,
                     Action = (c) =>
                     {
                         foreach (var p in processlist)
@@ -94,7 +94,6 @@ namespace Wox.Plugin.ProcessKiller
                 }
             }
         }
-
         private List<ProcessResult> GetProcesslist(string termToSearch)
         {
             var processlist = new List<ProcessResult>();
