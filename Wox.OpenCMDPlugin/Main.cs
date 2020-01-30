@@ -112,7 +112,7 @@ namespace Wox.Plugin.OpenCMD
             Process.Start(new ProcessStartInfo()
             {
                 FileName = "cmd",
-                WorkingDirectory = path
+                WorkingDirectory = path,
             });
         }
 

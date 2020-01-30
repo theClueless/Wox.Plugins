@@ -12,6 +12,7 @@ namespace Wox.Plugin.General
     {
         public const string CountActionKeyword = "word";
         public const string LogsKeyword = "logs";
+        public const string DataFolderKeyword = "settings";
         public const string MemoryKeyword = "mem";
 
         private readonly IClipboardHelper _clipboardHelper;
@@ -42,7 +43,7 @@ namespace Wox.Plugin.General
             var list = new List<Result>();
 
             var queryString = query.Search.Trim();
-            
+
             if (query.ActionKeyword == CountActionKeyword)
             {
                 var stringToCount = queryString;
@@ -68,8 +69,13 @@ namespace Wox.Plugin.General
                 case MemoryKeyword:
                     MemoryCommandHandler(list, _publicApi);
                     break;
+                case DataFolderKeyword:
+                    DataFolderCommandHandler(list);
+                    break;
+
+
             }
-            
+
             TryFixLanguage(query, list);
 
             return list;
@@ -104,6 +110,27 @@ namespace Wox.Plugin.General
             if (res != null)
             {
                 list.Add(res);
+            }
+        }
+
+        private static void DataFolderCommandHandler(List<Result> list)
+        {
+            var dataDirectory = Constant.DataDirectory;
+            if (Directory.Exists(dataDirectory))
+            {
+                var logsResult = new Result
+                {
+                    Title = "Wox Data Folder",
+                    SubTitle = dataDirectory,
+                    IcoPath = dataDirectory,
+                    Action = c =>
+                    {
+                        Process.Start(dataDirectory);
+                        return true;
+                    },
+                    Score = 120
+                };
+                list.Add(logsResult);
             }
         }
 
