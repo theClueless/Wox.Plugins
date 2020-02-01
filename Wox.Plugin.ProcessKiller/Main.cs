@@ -8,6 +8,7 @@ using System.Management;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 using Wox.Infrastructure;
+using Wox.Infrastructure.Logger;
 
 namespace Wox.Plugin.ProcessKiller
 {
@@ -88,10 +89,18 @@ namespace Wox.Plugin.ProcessKiller
 
             void KillProcess(Process p)
             {
-                if (!p.HasExited)
+                try
                 {
-                    p.Kill();
+                    if (!p.HasExited)
+                    {
+                        p.Kill();
+                    }
                 }
+                catch (Exception e)
+                {
+                    Log.Exception($"Fail to kill process {p.ProcessName}", e);
+                }
+                
             }
         }
         private List<ProcessResult> GetProcesslist(string termToSearch)
