@@ -14,19 +14,28 @@ namespace Wox.Plugin.OpenCMD
     public class Main : IPlugin
     {
         private const string ExplorerProcessName = "explorer";
+        private const string OpenCommandAction = "op";
         private List<SystemWindow> _openingWindows = new List<SystemWindow>();
+        private readonly IClipboardHelper _clipboardHelper = new ClipboardHelper();
+        private PluginInitContext _context;
 
         static Main()
         {
             // use to auto load Interop.SHDocVw.dll from resources
             // only copy to plugin folder can not load correctly
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
+        }
+
+        private enum Action
+        {
+            CopyPath,
+            OpenCmd
         }
 
         public List<Result> Query(Query query)
         {
             var list = new List<Result>();
-
+            Action action = query.ActionKeyword == OpenCommandAction ? Action.OpenCmd : Action.CopyPath;
             if (TryGetLastUsedExplorerWindowHandle(out var windowHandle))
             {
                 foreach (var window in GetWindowsWithPaths())
@@ -38,7 +47,11 @@ namespace Wox.Plugin.OpenCMD
                         if (path == null)
                             break;
 
-                        StartShell(path);
+                        StartShell(path, action);
+                        //if (action == Action.CopyPath)
+                        //{
+                        //    _context.API.ShowMsg($"{path} copied to clipboard");
+                        //}
                         return list;
                     }
                 }
@@ -51,14 +64,15 @@ namespace Wox.Plugin.OpenCMD
                 if (path == null)
                     continue;
 
+                var message = action == Action.OpenCmd ? "Open cmd in this path" : "Copy path to clipboard";
                 list.Add(new Result
                 {
                     IcoPath = "Images\\app.png",
                     Title = path,
-                    SubTitle = "Open cmd in this path",
-                    Action = (c) =>
+                    SubTitle = message,
+                    Action = c =>
                     {
-                        StartShell(path);
+                        StartShell(path, action);
                         return true;
                     }
                 });
@@ -105,15 +119,24 @@ namespace Wox.Plugin.OpenCMD
 
         public void Init(PluginInitContext context)
         {
+            _context = context;
         }
 
-        private static void StartShell(string path)
+        private void StartShell(string path, Action action)
         {
-            Process.Start(new ProcessStartInfo()
+            if (action == Action.CopyPath)
             {
-                FileName = "cmd",
-                WorkingDirectory = path,
-            });
+                // save path to clipboard
+                this._clipboardHelper.SetClipboardTest(path);
+            }
+            else if(action == Action.OpenCmd)
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    WorkingDirectory = path
+                });
+            }
         }
 
         private bool TryGetLastUsedExplorerWindowHandle(out IntPtr windowHandle)

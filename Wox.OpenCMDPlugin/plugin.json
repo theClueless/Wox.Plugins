@@ -1,5 +1,9 @@
 {
   "ID": "D2D2C23B084D411DB99EE0C79D6C2A6C",
+  "ActionKeywords": [
+    "op",
+    "cp"
+  ],
   "ActionKeyword": "op",
   "Name": "Wox.Plugin.OpenCMD",
   "Description": "open windows command with current explorer opening folder",

@@ -14,6 +14,8 @@ namespace Wox.Plugin.General
         public const string LogsKeyword = "logs";
         public const string DataFolderKeyword = "settings";
         public const string MemoryKeyword = "mem";
+        public const string ThreadsKeyword = "threads";
+        public const string StatusKeyword = "status";
 
         private readonly IClipboardHelper _clipboardHelper;
         private readonly ILanguageFixerHandler _languageFixerHandler;
@@ -69,6 +71,13 @@ namespace Wox.Plugin.General
                 case MemoryKeyword:
                     MemoryCommandHandler(list, _publicApi);
                     break;
+                case ThreadsKeyword:
+                    ThreadsCommandHanlder(list);
+                    break;
+                case StatusKeyword:
+                    MemoryCommandHandler(list, _publicApi);
+                    ThreadsCommandHanlder(list);
+                    break;
                 case DataFolderKeyword:
                     DataFolderCommandHandler(list);
                     break;
@@ -79,6 +88,37 @@ namespace Wox.Plugin.General
             TryFixLanguage(query, list);
 
             return list;
+        }
+
+        private void ThreadsCommandHanlder(List<Result> list, bool full = false)
+        {
+            var process = Process.GetCurrentProcess();
+            var threadsCount = process.Threads.Count;
+            var result = new Result
+            {
+                Score = 200,
+                Title = $"Threads: {threadsCount}"
+            };
+
+            list.Add(result);
+
+            if (full)
+            {
+                for (int i = 0; i < process.Threads.Count; i++)
+                {
+                    var thread = process.Threads[i];
+                    var r = new Result
+                    {
+                        Score = 100,
+                        Title = $"Thread: {thread.Id}",
+                        SubTitle = $"State: {thread.ThreadState.ToString()}, startTime: {thread.StartTime}"
+                    };
+
+                    list.Add(r);
+                }
+            }
+
+
         }
 
         private void MemoryCommandHandler(List<Result> list, IPublicAPI publicApi)
@@ -150,6 +190,7 @@ namespace Wox.Plugin.General
                         Title = "Log File",
                         SubTitle = "Open Latest Log File",
                         IcoPath = logFolder,
+                        Score = 200,
                         Action = c =>
                         {
                             Process.Start(latestLogFile.FullName);
@@ -158,6 +199,20 @@ namespace Wox.Plugin.General
                     };
                     list.Add(logsResult);
                 }
+
+                var logFolderResult = new Result
+                {
+                    Title = "Log Folder",
+                    SubTitle = "Open Log Folder",
+                    IcoPath = logFolder,
+                    Score = 199,
+                    Action = c =>
+                    {
+                        Process.Start(logFolder);
+                        return true;
+                    }
+                };
+                list.Add(logFolderResult);
             }
         }
 

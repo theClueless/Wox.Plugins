@@ -35,6 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -49,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IClipboardHelper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="PInvokeTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
